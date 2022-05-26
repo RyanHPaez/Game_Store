@@ -3,28 +3,25 @@ const router = express.Router();
 const Game = require('../models/gameSchema');
 
 //Find all games
-// router.get('/game', (req, res) => {
-//    console.log(Game)
-//     Game.find()
-//       .then((foundGame) => {
-//         res.status(200).json(foundGame);
-//       })
-//       .catch((err) => {
-//         res.status(404).json({
-//           message: "page not found in index",
-//           error: err
-//         });
-//       });
-//   });
-
-  //Find game by name
-  router.get('/name', async (req, res) => {
-    Game.find({}, (err, result) => {
-        if(err){
-            res.send(err)
-        }
-        res.send(result)
-    })
+router.get('/games', async (req, res) => {
+  Game.find({}, (err, result) => {
+      if(err){
+          res.send(err)
+      }
+      res.send(result)
   })
+})
+
+//Find by name
+router.get('/name', async (req,res) => {
+  try{
+    const foundGame = await Game.find({
+      $where: {name: req.params.name}
+    })
+    res.status(200).json(foundGame)
+  }catch(err){
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;
