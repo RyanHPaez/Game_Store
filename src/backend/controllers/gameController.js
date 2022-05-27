@@ -13,15 +13,17 @@ router.get('/games', async (req, res) => {
 })
 
 //Find by name
-router.get('/name', async (req,res) => {
-  try{
-    const foundGame = await Game.find({
-      $where: {name: req.params.name}
-    })
-    res.status(200).json(foundGame)
-  }catch(err){
-    res.status(500).json(err);
-  }
-})
+// router.get('/:name', async (req,res) => {
+//   console.log('Hit the route')
+//   try{
+//     const foundGame = await Game.find({
+//       title: req.params.name
+//     })
+//     console.log('database: ', foundGame.json())
+//     res.status(200).json(foundGame)
+//   }catch(err){
+//     res.status(500).json(err);
+//   }
+// })
 
 module.exports = router;
