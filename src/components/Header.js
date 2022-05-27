@@ -2,7 +2,6 @@ import Card from "react-bootstrap/Card";
 import axios from "axios";
 import {useState, useEffect, createContext} from 'react';
 import SearchResults from './SearchResults';
-import { useState, useEffect } from "react";
 
 //All commented functions are only tests
 export default function Header() {
@@ -71,8 +70,8 @@ export default function Header() {
         >
           The best Games are found here.
         </Card.Subtitle>
-
-        <form onSubmit={display}>
+          {/* onSubmit={display} */}
+        <form >
           <input
             // ref={term}
             type="text"
