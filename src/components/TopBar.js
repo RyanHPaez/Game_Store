@@ -4,13 +4,6 @@ import Button from "react-bootstrap/Button";
 import { Nav } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 
-
-
-
-
-
-
-
 export default function header() {
   return (
     <Navbar>
@@ -23,20 +16,15 @@ export default function header() {
                 "url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg)",
               height: "100px",
               backgroundRepeat: "no-repeat",
-              color: "red",
               backgroundPosition: "center",
               marginTop: "0px",
-            }}>
-              
-            <Button variant= "LogOn">Log in</Button>
+            }}
+          >
+            <Button variant="LogOn">Log in</Button>
             <Button variant="SignUp">Sign up</Button>
             <Button variant="GameCart">Game Cart</Button>
-            
-              
-  
-            <Card.Title
-             
-            >              
+
+            <Card.Title>
               {/* <Card.Subtitle className="mb-2 text-muted">Delivery • Pickup</Card.Subtitle> */}
               <Nav.Link></Nav.Link>
             </Card.Title>
