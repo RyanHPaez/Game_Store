@@ -1,4 +1,4 @@
-/* Position and sizing of burger button
+/* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
     width: 25px;
@@ -71,6 +71,6 @@
   }
   
   /* Styling of overlay */
-  .bm-overlay {
+   .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
-  } */
+  }
