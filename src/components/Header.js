@@ -1,14 +1,13 @@
 import Card from "react-bootstrap/Card";
 import axios from "axios";
+import { GameDataContext } from "../context/gameDataContext";
 import {useState, useEffect, createContext} from 'react';
-// import SearchResults from './SearchResults';
-
+import SearchResultsTest from './SearchResultsTest';
 //All commented functions are only tests
 export default function Header() {
 
   const [gameData, setGameData] = useState([]);
   const [input, setInput] = useState('');
-
   //-----------1.This runs on page load-------------------------->
   useEffect(  () => {
     axios.get(`http://localhost:3001/app/games`)
@@ -82,6 +81,10 @@ export default function Header() {
         </form>
 
        {display}
+      <GameDataContext.Provider value = {display}>
+        <SearchResultsTest/>
+      </GameDataContext.Provider>
+       
       </Card.Body>
     </Card>
   );
