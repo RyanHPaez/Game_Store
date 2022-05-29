@@ -1,8 +1,9 @@
 import Card from "react-bootstrap/Card";
-import axios from "axios";
-import {useState, useEffect, createContext} from 'react';
-import SearchResults from './SearchResults';
-import { useState, useEffect } from "react";
+// import axios from "axios";
+import { useState } from "react";
+// import {useState, useEffect, createContext} from 'react';
+// import SearchResults from './SearchResults';
+// import { useState, useEffect } from "react";
 
 //All commented functions are only tests
 export default function Header() {
@@ -10,32 +11,30 @@ export default function Header() {
   //     console.log('use effect');
   // },[])
 
+  //-----------1.This runs on page load-------------------------->
+  // useEffect(() => {
+  //     axios.get(`http://localhost:3001/app/games`)
+  //     .then(response => setDataRetreived(response.data));
+  //   }, []);
+  //   const [dataRetreived, setDataRetreived] = useState('');
 
-    //-----------1.This runs on page load-------------------------->
-    // useEffect(() => {
-    //     axios.get(`http://localhost:3001/app/games`)
-    //     .then(response => setDataRetreived(response.data));
-    //   }, []);
-    //   const [dataRetreived, setDataRetreived] = useState('');
+  //----------------2.This is executed when user submits form-------
+  // const [input, setInput] = useState('');
+  // const [titleName, setTitleName] = useState('');
+  // const display = (e) => {
+  //     e.preventDefault();
+  //     console.log('data retried', dataRetreived);
+  //     setInput(e.target.value);
 
-    //----------------2.This is executed when user submits form-------
-    // const [input, setInput] = useState('');
-    // const [titleName, setTitleName] = useState('');
-    // const display = (e) => {
-    //     e.preventDefault();
-    //     console.log('data retried', dataRetreived);
-    //     setInput(e.target.value);
-        
-    // }
-    // dataRetreived.map(item=>item.title == input ? setTitleName(item) : console.log(`Cannot find`));
-    // useEffect(()=>{display},[]);
+  // }
+  // dataRetreived.map(item=>item.title == input ? setTitleName(item) : console.log(`Cannot find`));
+  // useEffect(()=>{display},[]);
 
   const [input, setInput] = useState("");
 
   return (
     <Card
       style={{
-          
         width: "100%",
         backgroundImage:
           "url(https://www.ask.com/wp-content/uploads/sites/3/2021/11/e67af4c685145fd3374375d03bdab77a.jpg)",
@@ -43,22 +42,26 @@ export default function Header() {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right",
         backgroundColor: "#DFEED6",
-
         backgroundSize: "800px 500px",
+        
       }}
     >
       <Card.Body
         style={{
           textAlign: "left",
           width: "400px",
-
           marginLeft: "50px",
-          marginTop: "0px",
+          
         }}
       >
         <Card.Title
           style={{
             fontSize: "60px",
+            flex: 1, 
+            justifyContent: 'center', 
+            alignItems:"center", 
+            lineHeight:"100px",
+            justifyContent: 'space-between'
           }}
         >
           Order you games for pickup today!
@@ -71,8 +74,8 @@ export default function Header() {
         >
           The best Games are found here.
         </Card.Subtitle>
-
-        <form onSubmit={display}>
+        {/* onSubmit={display} */}
+        <form>
           <input
             // ref={term}
             type="text"

@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 export default function Footers() {
   return (
     <Container>
-      <h1>Footers</h1>
+      {/* <h1>Footers</h1> */}
       <Row>
         <Col xs>
 
@@ -40,6 +40,7 @@ export default function Footers() {
                     width: "60px",
                   }}
                 />
+                
               </div>
               <div
                 style={{
@@ -48,6 +49,7 @@ export default function Footers() {
                   margin: "2.5px",
                 }}
               >
+                
                 <Card.Title>item1</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   Say something here • or here
@@ -59,7 +61,7 @@ export default function Footers() {
         </Col>
         <Col xs>
 
-          <Card
+          {/* <Card
             style={{
               display: "block",
               margin: "2.5px",
@@ -147,7 +149,7 @@ export default function Footers() {
                 </Card.Subtitle>
               </div>
             </Card.Body>
-          </Card>
+          </Card> */}
         </Col>
       </Row>
     </Container>
