@@ -3,11 +3,11 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 // import {useState, useEffect, createContext} from 'react';
 // import SearchResults from './SearchResults';
-// import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 
 import axios from "axios";
 import { GameDataContext } from "../context/gameDataContext";
-import {useState, useEffect, createContext} from 'react';
+// import {useState, useEffect, createContext} from 'react';
 import SearchResultsTest from './SearchResultsTest';
 //All commented functions are only tests
 export default function Header() {
