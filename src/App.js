@@ -5,6 +5,7 @@ import Footers from './components/Footers';
 import Nav from './components/nav'
 import React from 'react';
 import Sidebar from './components/SideBar';
+// import Sidebar from './SideBar';
 import './App.css';
 // import { Footer } from 'react-bootstrap/lib/Modal';
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App" id="outer-container">
       
-      <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+      {/* <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /> */}
       <div id="page-wrap">
       <Nav />
       <TopBar />

@@ -5,11 +5,12 @@ import { useState } from "react";
 // import SearchResults from './SearchResults';
 // import { useState, useEffect } from "react";
 
+import axios from "axios";
+import { GameDataContext } from "../context/gameDataContext";
+import {useState, useEffect, createContext} from 'react';
+import SearchResultsTest from './SearchResultsTest';
 //All commented functions are only tests
 export default function Header() {
-  // useEffect(()=>{
-  //     console.log('use effect');
-  // },[])
 
   //-----------1.This runs on page load-------------------------->
   // useEffect(() => {
@@ -29,8 +30,30 @@ export default function Header() {
   // }
   // dataRetreived.map(item=>item.title == input ? setTitleName(item) : console.log(`Cannot find`));
   // useEffect(()=>{display},[]);
+  const [gameData, setGameData] = useState([]);
+  const [input, setInput] = useState('');
+  //-----------1.This runs on page load-------------------------->
+  useEffect(  () => {
+    axios.get(`http://localhost:3001/app/games`)
+      .then(response => setGameData(response.data));
+  }, []);
 
-  const [input, setInput] = useState("");
+  //----------------2.This is executed when user submits form-------
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setInput(e.target[0].value)
+    }
+
+    const searchedGame = gameData.filter((item)=>{
+      return item.title === input
+    })
+    console.log(searchedGame);
+
+    const display = searchedGame.map((item,i)=>{
+      return(
+        <h1 key={i}>{item.title}</h1>
+      )
+    })
 
   return (
     <Card
@@ -75,17 +98,22 @@ export default function Header() {
           The best Games are found here.
         </Card.Subtitle>
         {/* onSubmit={display} */}
-        <form>
+        
+        <form onSubmit={handleSearch}>
           <input
             // ref={term}
             type="text"
             placeholder="Enter Game Search Here"
             // onChange={(e)=>setInput(e.target.value)}
           />
-          {/* <button onClick={display}>Submit</button> */}
+          <button>Submit</button>
         </form>
 
-        <h1>{input}</h1>
+       {display}
+      <GameDataContext.Provider value = {display}>
+        <SearchResultsTest/>
+      </GameDataContext.Provider>
+       
       </Card.Body>
     </Card>
   );
