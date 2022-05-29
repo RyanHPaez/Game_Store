@@ -12,14 +12,14 @@ router.get('/games', async (req, res) => {
   }
 })
 
-router.get("/name", async (req, res) => {
-  try{
-    const foundGame = await Game.find(req.params.id)
-    res.status(200).json(foundGame);
-  }catch(err){
-    res.status(500).json(err);
-    console.log(err);
-  }
-});
+// router.get("/name", async (req, res) => {
+//   try{
+//     const foundGame = await Game.find(req.body.name)
+//     res.status(200).json(foundGame);
+//   }catch(err){
+//     res.status(500).json(err);
+//     console.log(err);
+//   }
+// });
 
 module.exports = router;
