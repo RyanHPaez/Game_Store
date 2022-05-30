@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './components/Header';
 import TopBar from "./components/TopBar";
-
 import React from 'react';
 import Sidebar from './SideBar';
 import './App.css';

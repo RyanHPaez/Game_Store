@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card"
 import axios from "axios"
-import {useState, useEffect} from 'react'
+import {useState, useEffect, React} from 'react'
 
 //All commented functions are only tests
 export default function Header() {

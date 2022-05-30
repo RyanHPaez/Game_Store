@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/GameApp', ()=> console.log('db conne
 
 
 
-app.get('/', (req, res) => {
+app.get('/games', (req, res) => {
     res.send('Hello World')
 })
 
