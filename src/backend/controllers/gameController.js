@@ -1,6 +1,9 @@
+require('dotenv').config()
 const express = require('express');
 const router = express.Router();
 const Game = require('../models/gameSchema');
+import React from 'react';
+
 
 //Find all games
 // router.get('/game', (req, res) => {
@@ -27,4 +30,7 @@ const Game = require('../models/gameSchema');
     })
   })
 
+  router.get('/', (req, res) => {
+    res.send('GET /games')
+  })
 module.exports = router;
