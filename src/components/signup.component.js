@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 export default class SignUp extends Component {
   render() {
     return (
-      <a class="fragment" href="google.com">
+    
+      <form>
+          <a class="fragment" href="google.com">
       <div>
           <span id='close'>x</span>
-      <form>
+          </div>
+</a>
         <h3>Sign Up</h3>
         <div className="mb-3">
           <label>First name</label>
@@ -44,8 +48,7 @@ export default class SignUp extends Component {
           Already registered <a href="/sign-in">sign in?</a>
         </p>
       </form>
-      </div>
-</a>
+      
     )
   }
 }

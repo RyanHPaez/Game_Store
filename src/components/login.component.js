@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
-
 export default class Login extends Component {
   render() {
     return (
-      <a class="fragment" href="google.com">
+      
+      <form>
+        <a class="fragment" href="google.com">
       <div>
           <span id='close'>x</span>
-      <form>
+          </div>
+</a>
         <h3>Sign In</h3>
         
         <div className="mb-3">
@@ -46,9 +48,9 @@ export default class Login extends Component {
         <p className="forgot-password text-right">
           Forgot <a href="#">password?</a>
         </p>
+        
       </form>
-      </div>
-</a>
+      
     )
   }
 }
