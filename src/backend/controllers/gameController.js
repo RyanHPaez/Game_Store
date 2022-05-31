@@ -22,4 +22,10 @@ router.get('/games', async (req, res) => {
 //   }
 // });
 
+//Cannot get this to send data to database
+router.post('/new', async (req,res) => {
+      Game.create(req.body);
+      res.send('Successfull');
+})
+
 module.exports = router;
