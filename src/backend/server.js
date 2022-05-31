@@ -3,10 +3,12 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require('cors');
 const bodyParser = require('body-parser')
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 require("dotenv").config(); 
 
 // Connect to mongodb
-mongoose.connect('mongodb://localhost:27017/GameApp', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
+mongoose.connect('MONGO_URI', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
 );
 
 //Middleware(order is important!)
