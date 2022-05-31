@@ -12,6 +12,43 @@ router.get('/games', async (req, res) => {
   }
 })
 
+
+// router.get('/:id', async (req, res) => {
+//   try{
+//     Game.find()
+//     .then ((games) =>{
+//       res.render('/games/index')
+//     })
+//   } catch(err){
+//     res.render('error404')
+//   }
+
+// })
+
+router.get('/:id', (req, res) => {
+  console.log(req.params.id)
+  Games.findById(req.params.id)
+  //.populate('comments')
+  .then(game => {
+      console.log(place.comments)
+      res.render('games/show', { place })
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
+})
+
+
+router.post('/new', async (req,res) => {
+  try{
+      User.create(req.body);
+      res.send('Successfull');
+  }catch(err){
+      res.status(500).json(err);
+  }
+})
+
 // router.get("/name", async (req, res) => {
 //   try{
 //     const foundGame = await Game.find(req.body.name)
