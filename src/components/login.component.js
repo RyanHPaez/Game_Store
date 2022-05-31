@@ -5,7 +5,7 @@ export default class Login extends Component {
     return (
       
       <form>
-        <a class="fragment" href="google.com">
+        <a class="fragment" href="home">
       <div>
           <span id='close'>x</span>
           </div>

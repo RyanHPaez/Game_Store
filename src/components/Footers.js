@@ -13,11 +13,12 @@ export default function Footers() {
 
           <Card
             style={{
-              display: "inline-block",
+              display: "inline",
               margin: "2.5px",
               border: "none",
               borderRadius: "0",
               borderBottom: "1px solid lightgray",
+              
             }}
           >
             <Card.Body
@@ -63,7 +64,7 @@ export default function Footers() {
 
           {/* <Card
             style={{
-              display: "block",
+              display: "inline",
               margin: "2.5px",
               border: "none",
               borderRadius: "0",
