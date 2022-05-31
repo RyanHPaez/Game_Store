@@ -14,6 +14,13 @@ app.use(express.json());
 app.use(bodyParser.json())
 //-------------Find out if we need middleware below------------------
 app.use(cors())
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+
+
 
 const gameController = require('./controllers/gameController');
 app.use('/app', gameController);

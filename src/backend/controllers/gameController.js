@@ -13,37 +13,32 @@ router.get('/games', async (req, res) => {
 })
 
 
-// router.get('/:id', async (req, res) => {
-//   try{
-//     Game.find()
-//     .then ((games) =>{
-//       res.render('/games/index')
-//     })
-//   } catch(err){
-//     res.render('error404')
-//   }
-
-// })
-
-router.get('/:id', (req, res) => {
-  console.log(req.params.id)
-  Games.findById(req.params.id)
-  //.populate('comments')
-  .then(game => {
-      console.log(place.comments)
-      res.render('games/show', { place })
-  })
-  .catch(err => {
-      console.log('err', err)
-      res.render('error404')
-  })
+router.get('/games/gameDetail', async(req,res) => {
+  try{
+    const reviewedGame = await Game.find();
+    res.status(200).send('this is the gameDetail page')
+  } catch(err){
+    res.status(500).json(err);
+  }
 })
 
+router.get('/games/gameReview', async(req,res) => {
+  try{
+    const reviewedGame = await Game.find();
+    res.status(200).send('this is the gameReview page')
+  } catch(err){
+    res.status(500).json(err);
+  }
+})
+
+router.get('*', (req, res) => {
+  res.send('404 not found')
+})
 
 router.post('/new', async (req,res) => {
   try{
       User.create(req.body);
-      res.send('Successfull');
+      res.send('Successful');
   }catch(err){
       res.status(500).json(err);
   }
