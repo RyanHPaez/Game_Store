@@ -19,7 +19,7 @@ function App() {
       <Nav />
       <TopBar />
       <Header />
-      <Footers />
+      {/* <Footers /> */}
       
       </div>
     </div>

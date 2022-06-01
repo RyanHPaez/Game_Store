@@ -1,19 +1,30 @@
-body, html, .App, #root, .auth-wrapper {
+html, .App, #root, .auth-wrapper {
   width: 99.75%;
   height: 100%;
+  display: fixed;
 }
 
 .App {
   text-align: right;
 }
-
 body {
+  
+  background-image: url("images/GS1.png");
+  background-repeat: no-repeat;  
+  -webkit-background-size: cover;
+  -moz-background-size: cover; 
+   -o-background-size: cover;
+  background-size: cover;
+  
+}
+/* body {
   background: #ffffff !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
-}
+} */
+
 
 /* .App-logo {
   height: 40vmin;
@@ -178,12 +189,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 #close {
   /* float:right; */
-  display:inline-block;
+  /* display: absolute; */
   padding:2px 5px;
   background:#ccc;
 }
 
-/* .fa-1x {
+.fa-1x {
   font-size: 1.5rem;
 }
 .navbar-toggler.toggler-example {
@@ -200,4 +211,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 .dark-teal-text {
   color: #004d40;
-} */
+}
+

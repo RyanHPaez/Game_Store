@@ -56,47 +56,25 @@ export default function Header() {
     })
 
   return (
-    <Card
-      style={{
-        width: "100%",
-        backgroundImage:
-          "url(https://www.ask.com/wp-content/uploads/sites/3/2021/11/e67af4c685145fd3374375d03bdab77a.jpg)",
-        height: "550px",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right",
-        backgroundColor: "#DFEED6",
-        backgroundSize: "800px 500px",
-        
-      }}
-    >
+    <Card>
       <Card.Body
         style={{
           textAlign: "left",
-          width: "400px",
-          marginLeft: "50px",
-          
+          width: "250px",
+          marginLeft: "185px",
+          marginTop: "393px",
+          // position: "fixed",
         }}
       >
+       
         <Card.Title
           style={{
-            fontSize: "60px",
-            flex: 1, 
-            justifyContent: 'center', 
-            alignItems:"center", 
-            lineHeight:"100px",
-            justifyContent: 'space-between'
-          }}
-        >
-          Order you games for pickup today!
-        </Card.Title>
-        <Card.Subtitle
-          style={{
-            fontSize: "15px",
+            fontSize: "19px",            
           }}
           className="mb-2 text-muted"
         >
           The best Games are found here.
-        </Card.Subtitle>
+        </Card.Title>
         {/* onSubmit={display} */}
         
         <form onSubmit={handleSearch}>

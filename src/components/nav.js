@@ -4,6 +4,7 @@ import SignUp from "./signup.component";
 
 function Nav() {
   return ( 
+    
     <Router>
       <div className="Nav">
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
