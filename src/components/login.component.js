@@ -4,8 +4,18 @@ export default class Login extends Component {
   render() {
     return (
       
-      <form>
-        <a class="fragment" href="google.com">
+      <form style={{
+        textAlign: "center",
+        width: "300px",
+        marginLeft: "1600px",
+        marginTop: "-80px",
+        position: "absolute",
+        border: '2px solid red',
+        backgroundColor: "Yellow",
+        borderRadius: '30px',
+        
+      }}>
+        <a class="fragment" href="home">
       <div>
           <span id='close'>x</span>
           </div>

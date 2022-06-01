@@ -9,7 +9,7 @@ function SearchResultsTest(){
 
     return(
         
-        <h1>This is the search results: {gameData} </h1>
+        <h5>This is the search results: {gameData} </h5>
     
     )
 }

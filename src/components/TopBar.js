@@ -9,6 +9,7 @@ export default function header() {
       <Container>
         <Navbar.Brand href="#home">
           <Card
+          
             // style={{
             //   width: "100%",
             //   backgroundImage:
