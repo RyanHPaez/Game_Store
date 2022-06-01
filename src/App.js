@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import TopBar from "./components/TopBar";
-import Nav from './components/nav';
+// import Nav from './components/nav';
 import React, { Component } from 'react';
 import Sidebar from './components/SideBar';
 import Footers from './components/Footers'
@@ -16,7 +16,7 @@ function App() {
       
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
       <div id="page-wrap">
-      <Nav />
+      {/* <Nav /> */}
       <TopBar />
       <Header />
       {/* <Footers /> */}

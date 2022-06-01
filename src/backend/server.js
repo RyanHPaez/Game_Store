@@ -23,4 +23,4 @@ const userController = require('./controllers/userController');
 app.use('/signup', userController);
 
 //Local host port in server needs to be different from front end.
-app.listen(3001, () => console.log("Server is running"));
+app.listen(PORT, () => console.log("Server is running"));
