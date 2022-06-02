@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Game = require('../models/gameSchema');
 
+
 //Find all games
 router.get('/games', async (req, res) => {
   try{
@@ -15,8 +16,8 @@ router.get('/games', async (req, res) => {
 
 router.get('/games/gameDetail', async(req,res) => {
   try{
-    const reviewedGame = await Game.find();
-    res.status(200).send('this is the gameDetail page')
+    // const reviewedGame = await Game.find();
+    res.status(200).send('this is the gameDetail route')
   } catch(err){
     res.status(500).json(err);
   }
@@ -24,8 +25,8 @@ router.get('/games/gameDetail', async(req,res) => {
 
 router.get('/games/gameReview', async(req,res) => {
   try{
-    const reviewedGame = await Game.find();
-    res.status(200).send('this is the gameReview page')
+    
+    res.status(200).render('games/index')
   } catch(err){
     res.status(500).json(err);
   }
@@ -34,6 +35,20 @@ router.get('/games/gameReview', async(req,res) => {
 router.get('*', (req, res) => {
   res.send('404 not found')
 })
+
+// router.get('/profile/mygames', (req, res) => {
+//   let games = [{
+//     id:0101,
+//     title: 'New User',
+//     price: '2',
+
+
+//   }
+
+//   ]
+//   res.render('/games/index')
+// })
+
 
 router.post('/new', async (req,res) => {
   try{

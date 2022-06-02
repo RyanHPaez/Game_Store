@@ -5,22 +5,22 @@ function new_form () {
     return (
         <Def>
           <main>
-            <h1>Add a New Place</h1>
-            <form method="POST" action="/places">
+            <h1>Add a Review</h1>
+            <form method="POST" action="/games">
                 <div className='form-group'>
-                    <label htmlFor="name">Place Name</label>
+                    <label htmlFor="name">Game Name</label>
                     <input className='form-control' id="name" name="name" required />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor="pic">Place Picture</label>
+                    <label htmlFor="pic">Game Picture</label>
                     <input className='form-control' id="pic" name="pic" />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor="city">City</label>
-                    <input className='form-control' id="city" name="city" />
+                    <label htmlFor="genre">Genre</label>
+                    <input className='form-control' id="city" name="genre" />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor="state">State</label>
+                    <label htmlFor="state">state</label>
                     <input className='form-control' id="state" name="state" />
                 </div>
                 <div className='form-group'>

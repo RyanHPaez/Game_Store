@@ -6,15 +6,15 @@ const bodyParser = require('body-parser')
 require("dotenv").config(); 
 
 // Connect to mongodb
-mongoose.connect('mongodb://localhost:27017/GameApp', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
+mongoose.connect('mongodb+srv://MSProject:gameshopappajr@cluster0.nff4h.mongodb.net/?retryWrites0true&w-majority', ()=> console.log('db connected'), { useNewUrlParser: true,useUnifiedTopology: true}
 );
 
 //Middleware(order is important!)
 app.use(express.json()); 
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}));
 //-------------Find out if we need middleware below------------------
 app.use(cors())
-app.set('views', __dirname + '/views')
+// app.set('views', __dirname + '../views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))

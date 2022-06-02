@@ -3,9 +3,9 @@ const Def = require('../default')
 
 
 function show (data) {
-    let comments = (
+    let reviews = (
       <h3 className="inactive">
-        No comments yet!
+        No reviews yet!
       </h3>
     )
 
