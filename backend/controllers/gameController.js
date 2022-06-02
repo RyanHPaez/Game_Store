@@ -4,6 +4,7 @@ const Game = require('../models/gameSchema');
 
 //Find all games
 router.get('/games', async (req, res) => {
+  console.log('hit')
   try{
     const foundGames = await Game.find();
     res.status(200).json(foundGames);

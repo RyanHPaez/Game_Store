@@ -13,7 +13,7 @@ export default function Header() {
   const [input, setInput] = useState('');
   //-----------1.This runs on page load-------------------------->
   useEffect(  () => {
-    axios.get(`http://localhost:3001/app/games`)
+    axios.get(`http://localhost:3005/app/games`)
       .then(response => setGameData(response.data));
   }, []);
 
@@ -23,6 +23,8 @@ export default function Header() {
         setInput(e.target[0].value)
     }
 
+    const gameImg = gameData.map(item=>item.gameImage);
+    console.log('imga', gameImg)
     const searchedGame = gameData.filter((item)=>{
       return item.title === input
     })
@@ -67,6 +69,7 @@ export default function Header() {
         </form>
 
        {display}
+       <img src ={gameImg[0]}></img>
       <GameDataContext.Provider value = {display}>
         <SearchResultsTest/>
       </GameDataContext.Provider>
