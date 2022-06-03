@@ -2,8 +2,9 @@ const React = require('react')
 const Def = require('../default')
 
 
-function index (data) {
-    let gamesFormatted = ((games) => {
+function index (Game) {
+
+    let gamesFormatted = Game.map((games) => {
       return (
         <div className='col-sm-6'>
             <h2>
