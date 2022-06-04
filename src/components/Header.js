@@ -23,18 +23,19 @@ export default function Header() {
         setInput(e.target[0].value)
     }
 
-    const gameImg = gameData.map(item=>item.gameImage);
-    console.log('imga', gameImg)
-    const searchedGame = gameData.filter((item)=>{
-      return item.title === input
-    })
-    console.log(searchedGame);
+    //--------------This block of code is for the search bar-----------------
+    // const gameTitle = gameData.map(item=>item.gameTitle);
+    // console.log('img', gameImg)
+    // const searchedGame = gameData.filter((item)=>{
+    //   return item.title === input
+    // })
+    // console.log(searchedGame);
 
-    const display = searchedGame.map((item,i)=>{
-      return(
-        <h1 key={i}>{item.title}</h1>
-      )
-    })
+    // const display = searchedGame.map((item,i)=>{
+    //   return(
+    //     <h1 key={i}>{item.title}</h1>
+    //   )
+    // })
 
   return (
     <Card>
@@ -68,11 +69,12 @@ export default function Header() {
           <button>Submit</button>
         </form>
 
-       {display}
-       <img src ={gameImg[0]}></img>
-      <GameDataContext.Provider value = {display}>
+          {/* this was a test to check if database is connected. it is not needed */}
+       {/* {display}
+       <img src ={gameImg[0]}></img> */}
+      {/* <GameDataContext.Provider value = {display}>
         <SearchResultsTest/>
-      </GameDataContext.Provider>
+      </GameDataContext.Provider> */}
        
       </Card.Body>
     </Card>

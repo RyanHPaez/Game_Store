@@ -9,14 +9,23 @@ html, .App, #root, .auth-wrapper {
 }
 body {
   
-  background-image: url("images/GS1.png");
+  /* background-image: url("images/GS1.png"); */
   background-repeat: no-repeat;  
   -webkit-background-size: cover;
   -moz-background-size: cover; 
    -o-background-size: cover;
   background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: rgb(252, 252, 252);
   
 }
+
+#home-background{
+  background-image: url("images/GS1.png");
+  height: 800px;
+}
+
+/* i commented lines 27-34 out because the body tag was repeated ^ */
 /* body {
   background: #ffffff !important;
   min-height: 100vh;
@@ -31,10 +40,10 @@ body {
   pointer-events: none;
 } */
 
-body  {
+/* body  {
   font-family: 'Josefin Sans', sans-serif;
   background-color: rgb(252, 252, 252);
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

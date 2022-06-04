@@ -7,14 +7,14 @@ export default props => {
       <a className="menu-item" href="/home">
         Home
       </a>
-      <a className="menu-item" href="/item1">
-        item1
+      <a className="menu-item" href="/games">
+        games
       </a>
-      <a className="menu-item" href="/item2">
-        item2
+      <a className="menu-item" href="/gameReview">
+        gameReview
       </a>
-      <a className="menu-item" href="/item3">
-        item3
+      <a className="menu-item" href="/cart">
+        Cart
       </a>
     </Menu>
   );
