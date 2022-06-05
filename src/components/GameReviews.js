@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import { GameDataContext } from '../context/gameDataContext'
+
 function GameReview(){
 
     const gameData = useContext(GameDataContext)
@@ -19,6 +20,9 @@ function GameReview(){
 
     return(
         <div>
+          <a href='/cart'>
+        Cart
+      </a>
             {display}
         </div>
     )

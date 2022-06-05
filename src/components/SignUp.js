@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-export default class SignUp extends Component {
-  render() {
+function SignUp() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -22,9 +21,8 @@ export default class SignUp extends Component {
       }
       axios.post(`http://localhost:3001/signup/new`, newUser)
       .then(res=>console.log(res.data));
-
-      //window.location to redirect to a page
     }
+      //window.location to redirect to a page
     return (
     
       <form style={{
@@ -108,5 +106,6 @@ export default class SignUp extends Component {
       </form>
       
     )
-  }
 }
+
+export default SignUp

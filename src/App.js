@@ -1,17 +1,16 @@
 import './App.css';
-// import Header from './components/Header';
 // import TopBar from "./components/TopBar";
-// import Nav from './components/nav';
+// import Nav from './components/Nav';
 import Sidebar from './components/SideBar';
-import SignUp from './components/SignUp';
 import Home from './components/Home';
-import SearchResultsTest from './components/SearchResultsTest';
+import Games from './components/Games';
 import GameReviews from './components/GameReviews';
 import Cart from './components/Cart'
 import { GameDataContext } from './context/gameDataContext';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
+import SearchBar from './components/SearchBar';
 
 // import Burger from "./components/Burger";
 
@@ -27,19 +26,18 @@ function App() {
   return (
 
     <div className="App">
-      <a href = "/cart">Cart</a>
-      <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-      {/* <Nav />  */}
-      <Router>
-          <GameDataContext.Provider value = {gameData}>
-            <Routes>
-                <Route exact path = "/home" element={<Home/>}/>
-                <Route exact path = "/games" element={<SearchResultsTest/>}/>
-                <Route exact path = '/gameReview' element={<GameReviews/>}/>
-                <Route exact path = '/cart' element={<Cart/>}/>
-            </Routes>
-          </GameDataContext.Provider>
-      </Router>
+      <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /> 
+      <GameDataContext.Provider value = {gameData}>
+        <SearchBar/>
+        <Router>
+              <Routes>
+                  <Route exact path = "/" element={<Home/>}/>
+                  <Route exact path = "/games" element={<Games/>}/>
+                  <Route exact path = '/gameReview' element={<GameReviews/>}/>
+                  <Route exact path = '/cart' element={<Cart/>}/>
+              </Routes>
+        </Router>
+      </GameDataContext.Provider>
     </div>
   );
 }
