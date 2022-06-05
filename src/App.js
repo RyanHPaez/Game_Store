@@ -1,6 +1,4 @@
 import './App.css';
-// import TopBar from "./components/TopBar";
-// import Nav from './components/Nav';
 import Sidebar from './components/SideBar';
 import Home from './components/Home';
 import Games from './components/Games';
@@ -11,8 +9,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import SearchBar from './components/SearchBar';
-
-// import Burger from "./components/Burger";
 
 
 function App() {

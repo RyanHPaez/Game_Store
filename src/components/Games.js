@@ -13,11 +13,17 @@ function Games(){
       return(
 
         //  css this till line 
-        <div>
+        <div style =
+        {{
+          textAlign: "center",
+          margin:"50px",
+          display: "inline-table",
+          position:"static"
+        }}>
          
         <h1 key={i}>{item.title}</h1>
         <img src = {item.gameImage}></img>
-        <p>{item.price}</p>
+        <p>${item.price}</p>
         <button>Add To Cart</button>
         </div>
       )
@@ -29,7 +35,7 @@ function Games(){
       
         <div style={{backgroundColor:'yellow'}}>
           <a href='/cart'>Cart</a>
-        <h5>This is the search results: {display} </h5>
+          <h5>Games: {display} </h5>
         </div>
     )
 }
