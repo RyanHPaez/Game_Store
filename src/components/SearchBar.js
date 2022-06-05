@@ -31,12 +31,28 @@ export default function SearchBar() {
 
   return (
     <Card>
+<Card.Body
+      style={{
+        textAlign: "Center",
+        width: "100px",
+        marginLeft: "0px",
+        marginTop: "28px",
+        display: "-webkit-inline-flex"
+      }}
+      >
+      <Card.Title>
+          <h1>Game Store</h1>
+        </Card.Title>
+      </Card.Body>
+
       <Card.Body
         style={{
-          textAlign: "left",
-          width: "250px",
-          marginLeft: "185px",
-          marginTop: "400px",
+          textAlign: "center",
+          width: "720px",
+          marginLeft: "105px",
+          marginTop: "28px",
+          display: "-webkit-inline-flex",
+          position:"relative",
         }}
       >
        
@@ -48,7 +64,7 @@ export default function SearchBar() {
         >
           The best Games are found here.
         </Card.Title>
-    
+            
         <form onSubmit={handleSearch}>
           <input
             type="text"
@@ -57,8 +73,10 @@ export default function SearchBar() {
           <button>Submit</button>
         </form>
         
+        
        {/* <SearchResultsTest value = {display}/> */}
       </Card.Body>
+      
     </Card>
   );
 }

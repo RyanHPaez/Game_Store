@@ -1,36 +1,41 @@
 html, .App, #root, .auth-wrapper {
-  width: 99.75%;
-  height: 100%;
-  display: fixed;
+  width: 99.90%;
+  
+  display: block;
 }
 
 .App {
   text-align: right;
 }
 body {
+  width: 99.90%;
   
-  /* background-image: url("images/GS1.png"); */
+  margin: 0%;
+  top: 0px;
+
   background-repeat: no-repeat;  
-  -webkit-background-size: cover;
+  /* -webkit-background-size: cover;
   -moz-background-size: cover; 
    -o-background-size: cover;
-  background-size: cover;
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: rgb(252, 252, 252);
+  background-size: cover; */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  /* background-color: rgb(252, 252, 252);
+  min-height: 100vh; */
+  
+  display: ruby-base-container;
   
 }
 
-#home-background{
-  background-image: url("images/GS1.png");
-  height: 800px;
-}
+#background {
+  background-image: url("Images/GS1.png");
+  height: 700px;
 
-/* i commented lines 27-34 out because the body tag was repeated ^ */
+}
 /* body {
   background: #ffffff !important;
-  min-height: 100vh;
+  
   display: flex;
-  font-weight: 400;
+  
   font-family: 'Fira Sans', sans-serif;
 } */
 
@@ -40,16 +45,13 @@ body {
   pointer-events: none;
 } */
 
-/* body  {
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: rgb(252, 252, 252);
-} */
 
-@media (prefers-reduced-motion: no-preference) {
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -62,7 +64,7 @@ body {
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -71,9 +73,9 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(860deg);
   }
-}
+} */
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -113,6 +115,7 @@ body {
 Sidebar wrapper styles
 Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
 */
+
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
@@ -139,10 +142,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
  /* Individual item */
 .bm-item {
     display: inline-block;
-  
+
     color: #ffffff;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -161,32 +164,32 @@ Note: Beware of modifying this element as it can break the animations - you shou
  */ 
 
 
+ 
 
-
- .fragment {
+ /* .fragment {
   font-size: 12px;
   font-family: tahoma;
   height: 140px;
   border: 1px solid #ccc;
-  color: #555;
+  color: rgb(255, 0, 0);
   display: block;
   padding: 10px;
   box-sizing: border-box;
   text-decoration: none;
-}
+} */
 
-.fragment:hover {
+/* .fragment:hover {
   box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 
-}
+} */
 
-.fragment img { 
+/* .fragment img { 
   float: left;
   margin-right: 10px;
-}
+} */
 
 
-.fragment h3 {
+/* .fragment h3 {
   padding: 0;
   margin: 0;
   color: #369;
@@ -195,30 +198,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   padding: 0;
   margin: 0;
   color: #000;
-}
-#close {
-  /* float:right; */
-  /* display: absolute; */
+} */
+
+/* #close {
+  float:right;
+  display:inline-block;
   padding:2px 5px;
-  background:#ccc;
-}
-
-.fa-1x {
-  font-size: 1.5rem;
-}
-.navbar-toggler.toggler-example {
-  cursor: pointer;
-}
-.dark-blue-text {
-  color: #0A38F5;
-}
-.dark-pink-text {
-  color: #AC003A;
-}
-.dark-amber-text {
-  color: #ff6f00;
-}
-.dark-teal-text {
-  color: #004d40;
-}
-
+  background:rgb(250, 2, 2);
+} */

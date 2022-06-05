@@ -8,10 +8,10 @@ export default props => {
         Home
       </a>
       <a className="menu-item" href="/games">
-        games
+        Games
       </a>
       <a className="menu-item" href="/gameReview">
-        gameReview
+        Game Review
       </a>
       <a className="menu-item" href="/cart">
         Cart

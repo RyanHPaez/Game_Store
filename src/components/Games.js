@@ -11,7 +11,10 @@ function Games(){
     const [cart, setCart] = useState([])
     const display = gameData.map((item,i)=>{
       return(
+
+        //  css this till line 
         <div>
+         
         <h1 key={i}>{item.title}</h1>
         <img src = {item.gameImage}></img>
         <p>{item.price}</p>
