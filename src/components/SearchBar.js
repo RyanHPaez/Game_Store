@@ -31,27 +31,19 @@ export default function SearchBar() {
 
   return (
     <Card>
-<Card.Body
-      style={{
-        textAlign: "Center",
-        width: "100px",
-        marginLeft: "0px",
-        marginTop: "28px",
-        display: "-webkit-inline-flex"
-      }}
-      >
+<Card.Body>
       <Card.Title>
-          <h1>Game Store</h1>
+          
         </Card.Title>
       </Card.Body>
 
       <Card.Body
         style={{
           textAlign: "center",
-          width: "720px",
-          marginLeft: "105px",
-          marginTop: "28px",
-          display: "-webkit-inline-flex",
+          width: "300px",
+          marginRight: "20px",
+          marginBottom: "10px",
+          display: "inline-block",
           position:"relative",
         }}
       >

@@ -30,6 +30,10 @@ function Cart (){
         padding:"10px",
         marginTop:"2px",
         borderRadius: '20px',
+        textAlign: "center",
+          margin:"20px",
+          display: "inline-table",
+          position:"static"
       }}>
       
       <h3>Your Cart</h3>

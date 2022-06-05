@@ -1,6 +1,8 @@
 import {useContext} from 'react'
 import { GameDataContext } from '../context/gameDataContext'
 
+
+
 function GameReview(){
 
     const gameData = useContext(GameDataContext)
@@ -11,15 +13,30 @@ function GameReview(){
 
     const display = gameData.map((item,i)=>{
       return(
-        <div>
-            <img key={i} src={item.gameImage} height= "120px"></img>
+        <div
+        style={{
+          content:"center",
+          textAlign: "center",
+          margin:"50px",
+          display:  "inline-Block",
+          position:"relative",
+          // display: 'inline-block',
+    width: '400px ',
+    height: '5px'
+        }}>
+        
+            <img key={i} src={item.gameImage} 
+            
+            >
+
+            </img>
             <h3 key={i}><a href="/gameDetail">{item.title}</a></h3>
         </div>
       )
     })
 
     return(
-        <div>
+        <div style={{backgroundColor:'yellow'}}>
           <a href='/cart'>
         Cart
       </a>
