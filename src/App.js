@@ -28,11 +28,12 @@ function App() {
         <h1
           style={{
             textAlign: "Center",
-            marginTop: "20px",
+            marginTop: "0px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             color: "red",
+            textSizeAdjust:"auto"
           }}
         >
           Game Store

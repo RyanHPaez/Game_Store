@@ -19,7 +19,7 @@ const Footer = () => {
           justifyContent: "center",
         }}
       >
-        Game Store info
+        Game Store Info
       </h1>
       <Container>
         <Row

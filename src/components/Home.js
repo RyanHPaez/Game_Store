@@ -1,5 +1,3 @@
-
-
 //We need to work on the Css home page here
 function Home() {
   return (
