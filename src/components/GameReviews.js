@@ -15,16 +15,20 @@ function GameReview(){
       return(
         <div
         style={{
-          content:"center",
+          marginTop: "150px",
+          marginLeft: "30px",
           textAlign: "center",
-          margin:"50px",
-          display:  "inline-Block",
-          position:"relative",
-          // display: 'inline-block',
-    width: '400px ',
-    height: '5px'
+          // margin:"20px",
+          display: "inline-table",
+          position:"static",
+          border: '2px solid red',
+        backgroundColor: "white",
+        borderBottomColor:"blue",
+        borderTopColor:"blue",
+        borderRadius: '20px',
+        position:"relative",
         }}>
-        
+        <h2 key={i}>{item.title}</h2>
             <img key={i} src={item.gameImage} 
             
             >
@@ -36,12 +40,10 @@ function GameReview(){
     })
 
     return(
-        <div style={{backgroundColor:'yellow'}}>
-          <a href='/cart'>
-        Cart
-      </a>
-            {display}
-        </div>
+      <div id='home-cart' >
+      <a href='/cart'>Cart</a>
+      <h5>Games: {display} </h5>
+    </div>
     )
 }
 

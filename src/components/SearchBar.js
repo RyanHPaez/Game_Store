@@ -41,7 +41,8 @@ export default function SearchBar() {
         style={{
           textAlign: "center",
           width: "300px",
-          marginRight: "20px",
+          marginTop: '-60px',
+          marginRight: "200px",
           marginBottom: "10px",
           display: "inline-block",
           position:"relative",
@@ -50,7 +51,8 @@ export default function SearchBar() {
        
         <Card.Title
           style={{
-            fontSize: "19px",            
+            fontSize: "19px",
+            color: "red"            
           }}
           className="mb-2 text-muted"
         >
