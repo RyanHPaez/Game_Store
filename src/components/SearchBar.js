@@ -59,7 +59,7 @@ export default function SearchBar() {
           }}
           className="mb-2 text-muted"
         >
-          The best Games are found here.
+          The best Games are found here:
         </Card.Title>
             
         <form onSubmit={handleSearch}>

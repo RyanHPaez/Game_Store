@@ -1,6 +1,7 @@
 import './App.css';
 import Sidebar from './components/SideBar';
 import Home from './components/Home';
+import Footer from './components/Footer'
 import Games from './components/Games';
 import GameReviews from './components/GameReviews';
 import Cart from './components/Cart'
@@ -82,6 +83,7 @@ function App() {
             <Route exact path="/sign-up" element={<SignUp />} />
           </Routes>
         </Router>
+        <Footer/>
       </GameDataContext.Provider>
     </div>
   );
