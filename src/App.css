@@ -10,7 +10,8 @@ body {
 }
 
 #home-cart{
-  height: 100vh;
+  height: 120vh;
+  width: 100%;
   background-image: url("Images/GS1.png");
   background-size: cover;
   background-repeat: no-repeat; 
@@ -41,7 +42,7 @@ body {
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #01eeff;
+  background: #ff0101;
 }
 
 /* Position and sizing of clickable cross button */
