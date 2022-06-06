@@ -6,8 +6,11 @@ function Home() {
     
         <div id='home-cart'>
           <a href='/cart'>
-        Cart
-      </a>
+            Cart
+          </a><br/>
+          <a href='/sign-up'>
+            Sign-Up
+          </a>
          </div>
   );
 }

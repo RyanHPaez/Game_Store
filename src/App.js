@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import SearchBar from './components/SearchBar';
+import SignUp from './components/SignUp';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                   <Route exact path = "/games" element={<Games/>}/>
                   <Route exact path = '/gameReview' element={<GameReviews/>}/>
                   <Route exact path = '/cart' element={<Cart/>}/>
+                  <Route exact path = '/sign-up' element={<SignUp/>}/>
               </Routes>
         </Router>
       </GameDataContext.Provider>
