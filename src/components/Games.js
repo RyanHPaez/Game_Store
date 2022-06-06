@@ -15,13 +15,13 @@ function Games(){
         //  css this till line 
         <div style =
         {{
-          marginTop: "150px",
+          marginTop: "80px",
           marginLeft: "30px",
           textAlign: "center",
           display: "inline-table",
           position:"static",
           border: '2px solid red',
-        backgroundColor: "white",
+        backgroundColor: "lightblue",
         borderBottomColor:"blue",
         borderTopColor:"blue",
         borderRadius: '20px',
@@ -40,7 +40,7 @@ function Games(){
 // }
     return(
       
-        <div >
+      <div id='home-cart' >
          
           <h5> {display} </h5>
         </div>

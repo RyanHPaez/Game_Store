@@ -15,14 +15,14 @@ function GameReview(){
       return(
         <div
         style={{
-          marginTop: "150px",
+          marginTop: "80px",
           marginLeft: "30px",
           textAlign: "center",
           // margin:"20px",
           display: "inline-table",
           position:"static",
           border: '2px solid red',
-        backgroundColor: "white",
+        backgroundColor: "lightblue",
         borderBottomColor:"blue",
         borderTopColor:"blue",
         borderRadius: '20px',
