@@ -43,7 +43,7 @@ export default function SearchBar() {
           width: "30%",
           height: "auto",
           marginTop: '-50px',
-          marginRight: "20px",
+          marginRight: "100px",
           marginBottom: "10px",
           display: "flex",
           position:"relative",
