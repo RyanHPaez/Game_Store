@@ -21,31 +21,66 @@ function App() {
   const [gameData, setGameData] = useState([]);
 
   return (
-
     <div className="App">
-      
-      <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /> 
-      <GameDataContext.Provider value = {gameData}>
-      <h1
-      style={{
-        textAlign: "Center",
-        marginTop: "20px",
-        display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        color:"red",
-
-      }}
-      >Game Store</h1>
-        <SearchBar/>
+      <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
+      <GameDataContext.Provider value={gameData}>
+        <h1
+          style={{
+            textAlign: "Center",
+            marginTop: "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "red",
+          }}
+        >
+          Game Store
+        </h1>
+        <a
+          href="/cart"
+          style={{
+            float:"right",
+            display: "flex",
+            marginTop: '-50px',
+            marginBottom:"20px",
+            marginRight: "20px",
+            textAlign: "center",
+            border: "2px solid red",
+            backgroundColor: "white",
+            borderBottomColor: "blue",
+            borderTopColor: "blue",
+            borderRadius: "5px",
+          }}
+        >
+          Cart
+        </a>
+        <br />
+        <a href="/sign-up"
+        style={{
+          float:"right",
+            display: "flex",
+            marginTop: '-50px',
+            marginRight: "20px",
+            textAlign: "center",
+            border: "2px solid red",
+            backgroundColor: "white",
+            borderBottomColor: "blue",
+            borderTopColor: "blue",
+            borderRadius: "5px",
+            marginLeft:"10px",
+            position:"relative",
+        }}
+        >
+          Sign-Up</a>
+        <SearchBar />
         <Router>
-              <Routes>
-                  <Route exact path = "/" element={<Home/>}/>
-                  <Route exact path = "/games" element={<Games/>}/>
-                  <Route exact path = '/gameReview' element={<GameReviews/>}/>
-                  <Route exact path = '/cart' element={<Cart/>}/>
-                  <Route exact path = '/sign-up' element={<SignUp/>}/>
-              </Routes>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/games" element={<Games />} />
+            <Route exact path="/gameReview" element={<GameReviews />} />
+            <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/sign-up" element={<SignUp />} />
+          </Routes>
         </Router>
       </GameDataContext.Provider>
     </div>

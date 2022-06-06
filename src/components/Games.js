@@ -18,7 +18,6 @@ function Games(){
           marginTop: "150px",
           marginLeft: "30px",
           textAlign: "center",
-          // margin:"20px",
           display: "inline-table",
           position:"static",
           border: '2px solid red',
@@ -41,8 +40,8 @@ function Games(){
 // }
     return(
       
-        <div id='home-cart' >
-          <a href='/cart'>Cart</a>
+        <div >
+         
           <h5> {display} </h5>
         </div>
     )

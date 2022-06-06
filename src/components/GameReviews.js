@@ -41,7 +41,7 @@ function GameReview(){
 
     return(
       <div id='home-cart' >
-      <a href='/cart'>Cart</a>
+      
       <h5>Games: {display} </h5>
     </div>
     )
