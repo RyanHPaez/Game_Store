@@ -1,3 +1,4 @@
+const { data } = require('autoprefixer');
 const express = require('express');
 const router = express.Router();
 const User = require('../models/userSchema');
@@ -26,21 +27,29 @@ router.get('/users', async (req,res) => {
 // })
 
 //Create User
-router.post('/user', async (req,res) => {
-   console.log(req.body)
+router.post('/newUser', async (req,res) => {
+   console.log('req.body for user: ', req.body)
     try{
-       User.create(
-                {
-                    name: req.body.name ,
-                    email: req.body.email,
-                    password: req.body.password,
-                    pref_genre: req.body.pref_genre,
-                    pref_system: req.body.pref_system
-                }
-        )
-    
+        User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+            pref_genre: req.body.pref_genre,
+            pref_system: req.body.pref_system
+        })
+        res.status(200).json('successfully created user');
     }catch(err){
         res.status(500).json(err);
+    }
+})
+
+//Update user info
+router.put('/updateUser', async (req,res)=>{
+    console.log('hit update route')
+    try{
+
+    }catch(err){
+        res.send(err)
     }
 })
 module.exports = router;

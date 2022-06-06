@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GameDataContext } from '../context/gameDataContext'
 
-function Cart (){
+function Cart (prop){
 
   const gameData = useContext(GameDataContext);
     console.log(gameData)

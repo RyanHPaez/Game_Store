@@ -3,8 +3,11 @@ function Home() {
   return (
         <div id='home-background'>
           <a href='/cart'>
-        Cart
-      </a>
+            Cart
+          </a><br/>
+          <a href='/sign-up'>
+            Sign-Up
+          </a>
          </div>
   );
 }
