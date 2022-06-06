@@ -10,13 +10,21 @@ html, .App, #root, .auth-wrapper {
 }
 body {
   width: 100%;
-  background-image: url("Images/GS1.png");  
+  /* background-image: url("Images/GS1.png");   */
   margin: 0%;
   top: 0px;
   background-repeat: no-repeat; 
   display: flex;
-  position: fixed;
+  position: relative;
   
+}
+body {
+  width: 100%;
+  height: auto;
+  background-image: url("Images/GS1.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid red;
 }
 
 #home-cart {
