@@ -11,7 +11,7 @@ function Cart (){
         <div>
           <img src={game.gameImage}></img>
           <p>{game.title}</p>
-          <p>{game.price}</p>
+          <p>${game.price}</p>
         </div>
       )
     })
@@ -30,8 +30,7 @@ function Cart (){
         padding:"10px",
         marginTop:"0px",
         borderRadius: '20px',
-        textAlign: "center",
-          
+        textAlign: "center",          
           display: "inline-table",
           position:"static"
       }}>

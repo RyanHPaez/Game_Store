@@ -52,7 +52,7 @@ export default function SearchBar() {
         <Card.Title
           style={{
             fontSize: "19px",
-            color: "red"            
+            color: "red",            
           }}
           className="mb-2 text-muted"
         >

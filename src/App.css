@@ -14,7 +14,8 @@ body {
   margin: 0%;
   top: 0px;
   background-repeat: no-repeat; 
-  display: ruby-base-container;
+  display: flex;
+  position: fixed;
   
 }
 
