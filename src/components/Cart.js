@@ -21,15 +21,19 @@ function Cart (prop){
     return (
       
       <form style={{
-        border: '2px solid red',
+        border: '2px solid blue',
         color:"yellow",
         backgroundColor: "red",
         borderBottomColor:"blue",
         borderTopColor:"blue",
         float: "right",
         padding:"10px",
-        marginTop:"2px",
+        marginTop:"0px",
         borderRadius: '20px',
+        textAlign: "center",
+          
+          display: "inline-table",
+          position:"static"
       }}>
       
       <h3>Your Cart</h3>

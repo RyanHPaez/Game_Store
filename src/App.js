@@ -23,8 +23,20 @@ function App() {
   return (
 
     <div className="App">
+      
       <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /> 
       <GameDataContext.Provider value = {gameData}>
+      <h1
+      style={{
+        textAlign: "Center",
+        marginTop: "20px",
+        display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        color:"red",
+
+      }}
+      >Game Store</h1>
         <SearchBar/>
         <Router>
               <Routes>

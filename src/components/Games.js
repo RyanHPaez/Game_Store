@@ -15,13 +15,21 @@ function Games(){
         //  css this till line 
         <div style =
         {{
+          marginTop: "150px",
+          marginLeft: "30px",
           textAlign: "center",
-          margin:"50px",
+          // margin:"20px",
           display: "inline-table",
-          position:"static"
+          position:"static",
+          border: '2px solid red',
+        backgroundColor: "white",
+        borderBottomColor:"blue",
+        borderTopColor:"blue",
+        borderRadius: '20px',
+        position:"relative",
         }}>
          
-        <h1 key={i}>{item.title}</h1>
+        <h2 key={i}>{item.title}</h2>
         <img src = {item.gameImage}></img>
         <p>${item.price}</p>
         <button>Add To Cart</button>
@@ -33,9 +41,9 @@ function Games(){
 // }
     return(
       
-        <div style={{backgroundColor:'yellow'}}>
+        <div id='home-cart' >
           <a href='/cart'>Cart</a>
-          <h5>Games: {display} </h5>
+          <h5> {display} </h5>
         </div>
     )
 }
