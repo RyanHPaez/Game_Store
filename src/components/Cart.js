@@ -1,20 +1,34 @@
 import React, { useContext } from 'react'
 import { GameDataContext } from '../context/gameDataContext'
+import { CartContext } from '../context/cartContext';
 
-function Cart (){
-
+function Cart (props){
+  const cartItems = props;
   const gameData = useContext(GameDataContext);
     console.log(gameData)
+ 
+  const checkout = useContext(CartContext)
 
-    const display = gameData.map(game=>{
-      return (
-        <div>
-          <img src={game.gameImage}></img>
-          <p>{game.title}</p>
-          <p>{game.price}</p>
-        </div>
-      )
-    })
+  console.log('checkout', checkout)
+  // const cartItemMap = cartItems.map((game, i) => {
+  //   return(
+  //     <Games key="" game={game}/>
+  //   )
+  // })
+const display = checkout.map((cartItem) =>{
+  return(
+    
+              <div>
+                <img src={cartItem.gameImage}></img>
+                <p>{cartItem.title}</p>
+                <p>{cartItem.price}</p> 
+              </div>
+            
+          )
+})
+
+
+
     //started a checkout function that will sum the prices from each game and display them onto the cart page
     // const checkout = gameData.map(game)
 
@@ -34,7 +48,12 @@ function Cart (){
       
       <h3>Your Cart</h3>
       
+    
+      
+      <div>
       {display}
+      </div>
+
       <p>Tax</p>
       <p>Total: </p>
         <div className="d-grid">

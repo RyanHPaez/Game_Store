@@ -19,6 +19,8 @@ function App() {
   }, []);
   const [gameData, setGameData] = useState([]);
 
+  
+  
   return (
 
     <div className="App">
@@ -28,9 +30,9 @@ function App() {
         <Router>
               <Routes>
                   <Route exact path = "/" element={<Home/>}/>
-                  <Route exact path = "/games" element={<Games/>}/>
-                  <Route exact path = '/gameReview' element={<GameReviews/>}/>
-                  <Route exact path = '/cart' element={<Cart/>}/>
+                  <Route exact path = "/games" element={<Games/>}  />
+                  <Route exact path = '/gameReview' element={<GameReviews/>}   />
+                  <Route exact path = '/cart' element={<Cart/>} />
               </Routes>
         </Router>
       </GameDataContext.Provider>

@@ -1,11 +1,11 @@
 import {useContext} from 'react'
 import { GameDataContext } from '../context/gameDataContext'
 
-function GameReview(){
+function GameReview(props){
 
     const gameData = useContext(GameDataContext)
     console.log('Game data', gameData)
-    
+    const {cartItem} = props;
   
     console.log(gameData);
 
