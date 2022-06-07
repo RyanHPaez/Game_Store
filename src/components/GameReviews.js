@@ -40,7 +40,11 @@ function GameReview(){
     })
 
     return(
-      <div id='home-cart' >
+      <div id='home-cart' 
+      style={{
+        border: "20px solid black",
+      }}
+      >
       
       <h5>Games: {display} </h5>
     </div>

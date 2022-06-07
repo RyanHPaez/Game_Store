@@ -11,7 +11,7 @@ body {
 }
 
 #home-cart{
-  height: 120vh;
+  height: 150vh;
   width: 100%;
   position:sticky ;
   background-image: url("Images/GS1.png");

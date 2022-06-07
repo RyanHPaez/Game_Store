@@ -34,7 +34,6 @@ function App() {
             alignItems: "center",
             color: "red",
             textSizeAdjust:"auto",
-            // fontSize:"64"
           }}
         >
           Game Store

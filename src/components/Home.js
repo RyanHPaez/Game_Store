@@ -3,7 +3,11 @@
 function Home() {
   return (
     
-        <div id='home-cart'>
+        <div id='home-cart'
+        style={{
+          border: "20px solid black",
+        }}
+        >
           
          </div>
          

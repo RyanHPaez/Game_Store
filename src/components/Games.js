@@ -43,7 +43,11 @@ function Games() {
   // console.log(e.target[0].value)
   // }
   return (
-    <div id="home-cart">
+    <div id="home-cart" 
+    style={{
+      border: "20px solid black",
+    }}
+    >
       <h5> {display} </h5>
     </div>
   );
