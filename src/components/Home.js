@@ -4,7 +4,8 @@ function Home() {
     <div
       id="home-cart"
       style={{
-        border: "20px solid black",
+        borderBottom: "40px solid lightblue",
+        borderTop: "40px solid lightblue",
       }}
     ></div>
   );
