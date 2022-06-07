@@ -5,16 +5,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser')
 require("dotenv").config(); 
 
-
-
-
 // Connect to mongodb
 mongoose.connect('mongodb+srv://MSProject:gameshopappajr@cluster0.nff4h.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true,useUnifiedTopology: true}, ()=> console.log('db connected')
 );
 
 //Middleware(order is important!)
 app.use(express.json()); 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'))
 // app.use(express.json({strict: false}));
 //-------------Find out if we need middleware below------------------

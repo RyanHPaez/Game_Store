@@ -55,10 +55,17 @@ function Games (props){
         //  css this till line 
         <div style =
         {{
+          // marginTop: "80px",
+          margin:"20px",
           textAlign: "center",
-          margin:"50px",
           display: "inline-table",
-          position:"static"
+          position:"static",
+          border: '2px solid red',
+        backgroundColor: "lightblue",
+        borderBottomColor:"blue",
+        borderTopColor:"blue",
+        borderRadius: '20px',
+        position:"relative",
         }}>
          <form onSubmit={handleClick}>
         <h1 key={i}>{item.title}</h1>

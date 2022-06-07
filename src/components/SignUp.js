@@ -3,23 +3,23 @@ import { useState } from 'react';
 import axios from 'axios';
 function SignUp() {
 
-    const [name, setName] = useState('');
+    const [username, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [pref_system, setPref_System] = useState('');
-    const [pref_genre, setPref_system] = useState('');
+    const [pref_genre, setPref_Genre] = useState('');
 
     const handleSubmit = (e) => {
       e.preventDefault()
       const newUser = {
-        name: name,
+        username: username,
         email: email,
         password: password,
         pref_genre: pref_genre,
         pref_system: pref_system
 
       }
-      axios.post(`http://localhost:3001/signup/new`, newUser)
+      axios.post(`http://localhost:3005/signup/newUser`, newUser)
       .then(res=>console.log(res.data));
     }
       //window.location to redirect to a page
@@ -42,13 +42,13 @@ function SignUp() {
 </a>
         <h3>Sign Up</h3>
         <div className="mb-3">
-          <label>Full name</label> 
+          <label>Username</label> 
           <input
             type="text"
             className="form-control"
-            placeholder="First name"
-            value = {name}
-            onChange={(e)=> setName(e.target[0].value)}
+            // placeholder="Username"
+            // value = {username}
+            onChange={(e)=> setUserName(e.target.value)}
           />
         </div>
         {/* <div className="mb-3">
@@ -61,8 +61,8 @@ function SignUp() {
             type="email"
             className="form-control"
             placeholder="Enter email"
-            value = {email}
-            onChange = {(e)=>setEmail(e.target[0].value)}
+            // value = {email}
+            onChange = {(e)=>setEmail(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -71,8 +71,8 @@ function SignUp() {
             type="password"
             className="form-control"
             placeholder="Enter password"
-            value = {password}
-            onChange= {(e)=>setPassword(e.target[0].value)}
+            // value = {password}
+            onChange= {(e)=>setPassword(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -81,8 +81,8 @@ function SignUp() {
             type="text"
             className="form-control"
             placeholder="Enter preferred genre"
-            value = {pref_genre}
-            onChange = {(e)=>setPref_Genre(e.target[0].value)}
+            // value = {pref_genre}
+            onChange = {(e)=>setPref_Genre(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -91,8 +91,8 @@ function SignUp() {
             type="text"
             className="form-control"
             placeholder="Enter preferred system"
-            value = {pref_system}
-            onChange = {(e)=>setPref_System(e.target[0].value)}
+            // value = {pref_system}
+            onChange = {(e)=>setPref_System(e.target.value)}
           />
         </div>
         <div className="d-grid">

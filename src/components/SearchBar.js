@@ -31,38 +31,35 @@ export default function SearchBar() {
 
   return (
     <Card>
-<Card.Body
-      style={{
-        textAlign: "Center",
-        width: "100px",
-        marginLeft: "0px",
-        marginTop: "28px",
-        display: "-webkit-inline-flex"
-      }}
-      >
+<Card.Body>
       <Card.Title>
-          <h1>Game Store</h1>
+          
         </Card.Title>
       </Card.Body>
 
       <Card.Body
         style={{
           textAlign: "center",
-          width: "720px",
-          marginLeft: "105px",
-          marginTop: "28px",
-          display: "-webkit-inline-flex",
+          width: "30%",
+          height: "auto",
+          marginTop: '-50px',
+          marginRight: "100px",
+          marginBottom: "10px",
+          display: "flex",
           position:"relative",
+          float:"right",
+          backgroundSize: "contain",
         }}
       >
        
         <Card.Title
           style={{
-            fontSize: "19px",            
+            fontSize: "19px",
+            color: "red",            
           }}
           className="mb-2 text-muted"
         >
-          The best Games are found here.
+          The best Games are found here:
         </Card.Title>
             
         <form onSubmit={handleSearch}>

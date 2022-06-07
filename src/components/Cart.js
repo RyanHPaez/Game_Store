@@ -29,21 +29,29 @@ const display = checkout.map((cartItem) =>{
 
 
 
+  
+    
+
+   
     //started a checkout function that will sum the prices from each game and display them onto the cart page
     // const checkout = gameData.map(game)
 
     return (
       
       <form style={{
-        border: '2px solid red',
+        border: '2px solid blue',
+        position:"sticky",
         color:"yellow",
         backgroundColor: "red",
         borderBottomColor:"blue",
         borderTopColor:"blue",
         float: "right",
         padding:"10px",
-        marginTop:"2px",
+        marginTop:"0px",
         borderRadius: '20px',
+        textAlign: "center",          
+          display: "inline-table",
+          
       }}>
       
       <h3>Your Cart</h3>
@@ -61,9 +69,19 @@ const display = checkout.map((cartItem) =>{
             Checkout
           </button>
         </div> 
-      </form>
+      </form>      
+    )
+
+    return (
+      <div id='home-cart' >
       
+      <h5>Games: {display} </h5>
+    </div>
     )
 }
 
 export default Cart
+
+
+
+
