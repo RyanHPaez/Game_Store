@@ -12,6 +12,8 @@ import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import SignUp from "./components/SignUp";
 
+
+
 function App() {
   useEffect(() => {
     axios
@@ -59,6 +61,7 @@ function App() {
           Cart
         </a>
         <br />
+        
         <a
           href="/sign-up"
           style={{

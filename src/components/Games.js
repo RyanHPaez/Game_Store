@@ -1,11 +1,11 @@
 //This component is to test the displayed searched results from the user using props and useContext
 import { useEffect, useState } from 'react'
 import {useContext} from 'react'
-import { propTypes } from 'react-bootstrap/esm/Image'
+// import { propTypes } from 'react-bootstrap/esm/Image'
 import { GameDataContext } from '../context/gameDataContext'
 import { CartContext } from '../context/cartContext'
 import Cart from './Cart'
-import App from '../App'
+// import App from '../App'
 //this is a testing comonent
 function Games (props){
     
@@ -37,17 +37,22 @@ function Games (props){
         //  css this till line 
         <div style =
         {{
-          // marginTop: "80px",
-          margin:"20px",
+         background: "black",
+          overflowY: "scroll",
+          width: "280px",
+          height: "200px",
+          overflow: "scroll",
+          margin: "20px",
           textAlign: "center",
           display: "inline-table",
-          position:"static",
-          border: '2px solid red',
-        backgroundColor: "lightblue",
-        borderBottomColor:"blue",
-        borderTopColor:"blue",
-        borderRadius: '20px',
-        position:"relative",
+          position: "static",
+          border: "2px solid red",
+          backgroundColor: "black",
+          borderBottomColor: "blue",
+          borderTopColor: "blue",
+          color: "red",
+          borderRadius: "20px",
+          
         }}>
          <form onSubmit={handleClick}>
         <h2 key={i}>{item.title}</h2>
@@ -61,12 +66,16 @@ function Games (props){
 
     return(
       
-        <div style={{backgroundColor:'black'}}>
-          {/* <a href='/cart'>Cart</a> */}
-          <h5>Games: {display} </h5>
+        <div style={{backgroundColor:'black',
+        borderBottom: "50px solid lightblue",
+        borderTop: "50px solid lightblue",
+        }}>
           <CartContext.Provider value={totalCartItems}>
             <Cart/>
           </CartContext.Provider>
+          {/* <a href='/cart'>Cart</a> */}
+          <h5>Games: {display} </h5>
+          
         </div>
     )
 }
