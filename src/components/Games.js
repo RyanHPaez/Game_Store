@@ -50,7 +50,7 @@ function Games (props){
         position:"relative",
         }}>
          <form onSubmit={handleClick}>
-        <h1 key={i}>{item.title}</h1>
+        <h2 key={i}>{item.title}</h2>
         <img src = {item.gameImage}></img>
         <p>${item.price}</p>
         <button onClick={() =>{selectedGame(item)}} >Add To Cart</button>

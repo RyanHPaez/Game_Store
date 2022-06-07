@@ -18,16 +18,19 @@ function Cart (props){
   console.log(deletedItem)
   
   
-  // const removeItem = (e) => {
-  //   console.log('e', e)
-  //   // const updateCheckout = checkout.filter(item => cartItem !== item.title)
-  //   // let checkoutItem= document.getElementById(`checkoutItem${i}`);
-  //   // // checkoutItem.remove()
-  //   // console.log('checkout', checkoutItem)
-  //   // const e = () => { 
-  //   //   checkoutItem.remove()
-  //   // }
-  //   }
+  const removeItem = (e) => {
+    console.log('e')
+    let itemToRemove = checkout.findIndex(e => {
+      return 
+    })
+    // const updateCheckout = checkout.filter(item => cartItem !== item.title)
+    // let checkoutItem= document.getElementById(`checkoutItem${i}`);
+    // // checkoutItem.remove()
+    // console.log('checkout', checkoutItem)
+    // const e = () => { 
+    //   checkoutItem.remove()
+    // }
+    }
 
   let i = 0;
 
@@ -42,7 +45,7 @@ function Cart (props){
                 <img src={cartItem.gameImage}></img>
                 <p>{cartItem.title}</p>
                 <p>$ {cartItem.price}</p> 
-                <button> 
+                <button onClick={removeItem(cartItem)}> 
                 Remove From Cart 
                 </button>
               </div>
