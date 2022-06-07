@@ -33,7 +33,8 @@ function App() {
             justifyContent: "center",
             alignItems: "center",
             color: "red",
-            textSizeAdjust:"auto"
+            textSizeAdjust:"auto",
+            // fontSize:"64"
           }}
         >
           Game Store
@@ -61,7 +62,7 @@ function App() {
         style={{
           float:"right",
             display: "flex",
-            marginTop: '-50px',
+            marginTop: '-30px',
             marginRight: "20px",
             textAlign: "center",
             border: "2px solid red",

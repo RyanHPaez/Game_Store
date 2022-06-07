@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1
+      <h2
         style={{
           color: "Red",
           display: "flex",
@@ -21,7 +21,7 @@ const Footer = () => {
         }}
       >
         Game Store Info
-      </h1>
+      </h2>
       <Container>
         <Row
           style={{
