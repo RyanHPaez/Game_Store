@@ -5,49 +5,31 @@ import { propTypes } from 'react-bootstrap/esm/Image'
 import { GameDataContext } from '../context/gameDataContext'
 import { CartContext } from '../context/cartContext'
 import Cart from './Cart'
+import App from '../App'
 //this is a testing comonent
 function Games (props){
     
-
   const [cartItems, setCartItems]= useState([]);
   const [totalCartItems, setTotalCartItems] = useState([]);
- 
-
-  // const addGame = (newCartItem) =>{
-  //   return([...cartItems, newCartItem])
-  // }
 
   useEffect(() => {}, [])
- 
 
     const gameData = useContext(GameDataContext)
-    console.log('Game data', gameData)
    
     const selectedGame = (game) => {
-     
-    
-      // selection=game
-      console.log('game', game)
+
+      // console.log('game', game)
       setCartItems(game)
-      console.log('cart items', cartItems)
-      
+      // console.log('cart items', cartItems)
       
     }
     
-    // const handleAddToCart = () =>{
-      
-    //   console.log('cart items', cartItems)   
-      
-      
-    // }
     const handleClick = (e) =>{
       e.preventDefault()
       let newItem = {};
       newItem = cartItems;
       setTotalCartItems([...totalCartItems,newItem])
     }
-    
-    console.log('total cart', totalCartItems)
     
     const display = gameData.map((item,i)=>{
       return(
@@ -76,9 +58,7 @@ function Games (props){
         </div>
       )
     })
-// const addToCart = (e) => {
-// console.log(e.target[0].value)
-// }
+
     return(
       
         <div style={{backgroundColor:'yellow'}}>
