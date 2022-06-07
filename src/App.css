@@ -7,14 +7,18 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 #home-cart{
   height: 120vh;
   width: 100%;
+  position:sticky ;
   background-image: url("Images/GS1.png");
   background-size: cover;
   background-repeat: no-repeat; 
+  
+
 }
 
 @keyframes App-logo-spin {

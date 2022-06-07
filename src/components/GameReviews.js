@@ -28,7 +28,7 @@ function GameReview(){
         borderRadius: '20px',
         position:"relative",
         }}>
-        <h2 key={i}>{item.title}</h2>
+        <h3 key={i}>{item.title}</h3>
             <img key={i} src={item.gameImage} 
             
             >

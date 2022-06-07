@@ -52,15 +52,12 @@ function Cart (prop){
             Checkout
           </button>
         </div> 
-      </form>      
+      </form>
+      
+      
     )
 
-    return (
-      <div id='home-cart' >
-      
-      <h5>Games: {display} </h5>
-    </div>
-    )
+    
 }
 
 export default Cart
