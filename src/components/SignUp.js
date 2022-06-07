@@ -27,17 +27,27 @@ function SignUp() {
       style={{
         textAlign: "center",
         width: "300px",
-
-        position: "absolute",
+        position: "relative",
         border: "2px solid red",
         backgroundColor: "Yellow",
         borderRadius: "30px",
+        float: "right",
       }}
       onSubmit={handleSubmit}
     >
       <a class="fragment" href="home">
         <div>
-          <span id="close">x</span>
+          <span
+            id="close"
+            style={{
+              width: "30px",
+              border: "2px solid black",
+              backgroundColor: "gray",
+              borderRadius: "0px",
+            }}
+          >
+            x
+          </span>
         </div>
       </a>
       <h3>Sign Up</h3>
@@ -45,16 +55,13 @@ function SignUp() {
         <label>Username</label>
         <input
           type="text"
-          className="form-control"
+          // className="form-control"
           // placeholder="Username"
           // value = {username}
           onChange={(e) => setUserName(e.target.value)}
         />
       </div>
-      {/* <div className="mb-3">
-          <label>Last name</label>
-          <input type="text" className="form-control" placeholder="Last name" />
-        </div> */}
+
       <div className="mb-3">
         <label>Email address</label>
         <input
