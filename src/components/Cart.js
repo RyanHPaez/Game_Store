@@ -1,19 +1,24 @@
 import React, { useContext } from 'react'
 import { GameDataContext } from '../context/gameDataContext'
-import Footer from './Footer'
 
 function Cart (prop){
+  
+  
 
   const gameData = useContext(GameDataContext);
     console.log(gameData)
+    
 
     const display = gameData.map(game=>{
       return (
+        
         <div>
           <img src={game.gameImage}></img>
           <p>{game.title}</p>
           <p>${game.price}</p>
         </div>
+
+        
       )
     })
     //started a checkout function that will sum the prices from each game and display them onto the cart page
@@ -23,6 +28,7 @@ function Cart (prop){
       
       <form style={{
         border: '2px solid blue',
+        position:"sticky",
         color:"yellow",
         backgroundColor: "red",
         borderBottomColor:"blue",
@@ -33,7 +39,7 @@ function Cart (prop){
         borderRadius: '20px',
         textAlign: "center",          
           display: "inline-table",
-          position:"static"
+          
       }}>
       
       <h3>Your Cart</h3>
@@ -46,18 +52,19 @@ function Cart (prop){
             Checkout
           </button>
         </div> 
-      </form>,
-      <h1
-      style={{
-        color: "Red",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "row",
-      }}
-    >
-      Ready to check out?</h1>
+      </form>      
+    )
+
+    return (
+      <div id='home-cart' >
+      
+      <h5>Games: {display} </h5>
+    </div>
     )
 }
 
 export default Cart
+
+
+
+

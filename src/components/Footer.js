@@ -44,7 +44,7 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">Ryan Paez</FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/ryan-paez/">Ryan Paez</FooterLink>
             <FooterLink href="#">Jason Garcia</FooterLink>
             <FooterLink href="#">Abraham Gonzalez</FooterLink>
           </Column>

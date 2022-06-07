@@ -16,7 +16,7 @@ function Games(){
         <div style =
         {{
           marginTop: "80px",
-          marginLeft: "30px",
+          marginLeft: "10px",
           textAlign: "center",
           display: "inline-table",
           position:"static",
