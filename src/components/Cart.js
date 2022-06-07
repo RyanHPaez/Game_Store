@@ -5,8 +5,8 @@ import { CartContext } from '../context/cartContext';
 
 
 
-function Cart (props){
-  const cartItems = props;
+function Cart (){
+ 
   const gameData = useContext(GameDataContext);
     console.log(gameData)
  
@@ -20,9 +20,9 @@ function Cart (props){
   
   const removeItem = (e) => {
     console.log('e')
-    let itemToRemove = checkout.findIndex(e => {
-      return 
-    })
+    // let itemToRemove = checkout.findIndex(e => {
+    //   return 
+    // })
     // const updateCheckout = checkout.filter(item => cartItem !== item.title)
     // let checkoutItem= document.getElementById(`checkoutItem${i}`);
     // // checkoutItem.remove()
