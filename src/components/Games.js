@@ -61,8 +61,8 @@ function Games (props){
 
     return(
       
-        <div style={{backgroundColor:'yellow'}}>
-          <a href='/cart'>Cart</a>
+        <div style={{backgroundColor:'black'}}>
+          {/* <a href='/cart'>Cart</a> */}
           <h5>Games: {display} </h5>
           <CartContext.Provider value={totalCartItems}>
             <Cart/>

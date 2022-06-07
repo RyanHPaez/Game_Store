@@ -41,14 +41,13 @@ function GameReview(props){
   });
 
   return (
-    <div
-      id="home-cart"
-      style={{
-        border: "20px solid black",
-      }}
-    >
-      <h5>Games: {display} </h5>
-    </div>
+    <div style={{backgroundColor:'black'}}>
+          {/* <a href='/cart'>Cart</a> */}
+          <h5>Games: {display} </h5>
+          {/* <CartContext.Provider value={totalCartItems}>
+            <Cart/>
+          </CartContext.Provider> */}
+        </div>
   );
 }
 

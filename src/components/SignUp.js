@@ -32,6 +32,7 @@ function SignUp() {
         backgroundColor: "Yellow",
         borderRadius: "30px",
         float: "right",
+        margin:"10px"
       }}
       onSubmit={handleSubmit}
     >
