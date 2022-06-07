@@ -38,11 +38,6 @@ const Footer = () => {
             <FooterLink href="#">Vision</FooterLink>
             <FooterLink href="#">Testimonials</FooterLink>
           </Column>
-          {/* <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-          </Column> */}
           <Column>
             <Heading>Contact Us</Heading>
             <FooterLink href="https://www.linkedin.com/in/ryan-paez/">Ryan Paez</FooterLink>
