@@ -16,9 +16,9 @@ function GameReview(){
         <div
         style={{
           marginTop: "80px",
-          marginLeft: "30px",
+          marginLeft: "0px",
           textAlign: "center",
-          // margin:"20px",
+          margin:"20px",
           display: "inline-table",
           position:"static",
           border: '2px solid red',

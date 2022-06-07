@@ -15,8 +15,8 @@ function Games(){
         //  css this till line 
         <div style =
         {{
-          marginTop: "80px",
-          marginLeft: "10px",
+          // marginTop: "80px",
+          margin:"20px",
           textAlign: "center",
           display: "inline-table",
           position:"static",
