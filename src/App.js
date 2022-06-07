@@ -52,6 +52,7 @@ function App() {
             borderBottomColor: "blue",
             borderTopColor: "blue",
             borderRadius: "5px",
+            position:"static",
           }}
         >
           Cart

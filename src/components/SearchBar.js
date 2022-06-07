@@ -55,11 +55,14 @@ export default function SearchBar() {
         <Card.Title
           style={{
             fontSize: "19px",
-            color: "red",            
+            color: "red",
+            display: "flex",
+            position:"relative", 
+            margin: "2px" 
           }}
-          className="mb-2 text-muted"
+          // className="mb-2 text-muted"
         >
-          The best Games are found here:
+          Find a game:
         </Card.Title>
             
         <form onSubmit={handleSearch}>
