@@ -24,7 +24,7 @@ function Games() {
           display: "inline-table",
           position: "static",
           border: "2px solid red",
-          backgroundColor: "lightblue",
+          backgroundColor: "black",
           borderBottomColor: "blue",
           borderTopColor: "blue",
           color: "red",

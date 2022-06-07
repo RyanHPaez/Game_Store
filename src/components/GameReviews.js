@@ -11,16 +11,20 @@ function GameReview() {
     return (
       <div
         style={{
-          marginTop: "80px",
-          marginLeft: "0px",
-          textAlign: "center",
+          background: "black",
+          overflowY: "scroll",
+          width: "280px",
+          height: "200px",
+          overflow: "scroll",
           margin: "20px",
+          textAlign: "center",
           display: "inline-table",
           position: "static",
           border: "2px solid red",
-          backgroundColor: "lightblue",
+          backgroundColor: "black",
           borderBottomColor: "blue",
           borderTopColor: "blue",
+          color: "red",
           borderRadius: "20px",
           position: "relative",
         }}
