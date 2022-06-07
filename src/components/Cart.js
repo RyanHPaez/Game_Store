@@ -2,9 +2,7 @@ import React, { useContext, useState } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 import { CartContext } from "../context/cartContext";
 
-
 function Cart(props) {
-  
   const cartItems = props;
   const gameData = useContext(GameDataContext);
   console.log(gameData);

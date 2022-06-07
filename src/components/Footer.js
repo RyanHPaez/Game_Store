@@ -13,8 +13,6 @@ const Footer = () => {
     <Box>
       <h2
         style={{
-          border: "1px solid lightblue",
-        borderTop: "1px solid lightblue",
           color: "Red",
           display: "flex",
           textAlign: "center",
