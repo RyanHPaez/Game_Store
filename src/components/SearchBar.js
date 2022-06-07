@@ -36,13 +36,13 @@ export default function SearchBar() {
 
       <Card.Body
         style={{
-          textAlign: "center",
+          textAlign: "column",
           width: "30%",
           height: "auto",
-          marginTop: "-50px",
+          marginTop: "-70px",
           marginRight: "100px",
           marginBottom: "10px",
-          display: "flex",
+          display: "inline-block",
           position: "relative",
           float: "right",
           backgroundSize: "contain",
@@ -52,7 +52,7 @@ export default function SearchBar() {
           style={{
             fontSize: "19px",
             color: "red",
-            display: "flex",
+            display: "inline-block",
             position: "relative",
             margin: "2px",
           }}
