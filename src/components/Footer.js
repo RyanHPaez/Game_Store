@@ -17,7 +17,7 @@ const Footer = () => {
           display: "flex",
           textAlign: "center",
           justifyContent: "center",
-          position: ""
+          position: "",
         }}
       >
         Game Store Info
@@ -40,7 +40,9 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="https://www.linkedin.com/in/ryan-paez/">Ryan Paez</FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/ryan-paez/">
+              Ryan Paez
+            </FooterLink>
             <FooterLink href="#">Jason Garcia</FooterLink>
             <FooterLink href="#">Abraham Gonzalez</FooterLink>
           </Column>
