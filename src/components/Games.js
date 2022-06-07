@@ -71,4 +71,4 @@ function Games (props){
     )
 }
 
-export default Games
+export default Games;

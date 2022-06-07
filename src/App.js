@@ -1,23 +1,22 @@
-import './App.css';
-import Sidebar from './components/SideBar';
-import Home from './components/Home';
-import Footer from './components/Footer'
-import Games from './components/Games';
-import GameReviews from './components/GameReviews';
-import Cart from './components/Cart'
-import { GameDataContext } from './context/gameDataContext';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import {useEffect, useState} from 'react'
-import axios from 'axios'
-import SearchBar from './components/SearchBar';
-import SignUp from './components/SignUp';
-
+import "./App.css";
+import Sidebar from "./components/SideBar";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+import Games from "./components/Games";
+import GameReviews from "./components/GameReviews";
+import Cart from "./components/Cart";
+import { GameDataContext } from "./context/gameDataContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import SearchBar from "./components/SearchBar";
+import SignUp from "./components/SignUp";
 
 function App() {
-
-  useEffect(  () => {
-    axios.get(`http://localhost:3005/app/games`)
-      .then(response => setGameData(response.data));
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3005/app/games`)
+      .then((response) => setGameData(response.data));
   }, []);
   const [gameData, setGameData] = useState([]);
 
@@ -35,7 +34,7 @@ function App() {
             justifyContent: "center",
             alignItems: "center",
             color: "red",
-            textSizeAdjust:"auto"
+            textSizeAdjust: "auto",
           }}
         >
           Game Store
@@ -43,10 +42,10 @@ function App() {
         <a
           href="/cart"
           style={{
-            float:"right",
+            float: "right",
             display: "flex",
-            marginTop: '-50px',
-            marginBottom:"20px",
+            marginTop: "-50px",
+            marginBottom: "20px",
             marginRight: "20px",
             textAlign: "center",
             border: "2px solid red",
@@ -54,16 +53,18 @@ function App() {
             borderBottomColor: "blue",
             borderTopColor: "blue",
             borderRadius: "5px",
+            position: "static",
           }}
         >
           Cart
         </a>
         <br />
-        <a href="/sign-up"
-        style={{
-          float:"right",
+        <a
+          href="/sign-up"
+          style={{
+            float: "right",
             display: "flex",
-            marginTop: '-50px',
+            marginTop: "-30px",
             marginRight: "20px",
             textAlign: "center",
             border: "2px solid red",
@@ -71,11 +72,12 @@ function App() {
             borderBottomColor: "blue",
             borderTopColor: "blue",
             borderRadius: "5px",
-            marginLeft:"10px",
-            position:"relative",
-        }}
+            marginLeft: "10px",
+            position: "relative",
+          }}
         >
-          Sign-Up</a>
+          Sign-Up
+        </a>
         <SearchBar />
         <Router>
           <Routes>
@@ -86,7 +88,7 @@ function App() {
             <Route exact path="/sign-up" element={<SignUp />} />
           </Routes>
         </Router>
-        <Footer/>
+        <Footer />
       </GameDataContext.Provider>
     </div>
   );

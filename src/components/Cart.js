@@ -68,24 +68,23 @@ console.log('sum', sum)
     //started a checkout function that will sum the prices from each game and display them onto the cart page
     // const checkout = gameData.map(game)
 
-    return (
-      
-      <form style={{
-        border: '2px solid blue',
-        position:"sticky",
-        color:"yellow",
+  return (
+    <form
+      style={{
+        border: "2px solid blue",
+        position: "sticky",
+        color: "yellow",
         backgroundColor: "red",
-        borderBottomColor:"blue",
-        borderTopColor:"blue",
+        borderBottomColor: "blue",
+        borderTopColor: "blue",
         float: "right",
-        padding:"10px",
-        marginTop:"0px",
-        borderRadius: '20px',
-        textAlign: "center",          
-          display: "inline-table",
-          
-      }}>
-      
+        padding: "10px",
+        marginTop: "0px",
+        borderRadius: "20px",
+        textAlign: "center",
+        display: "inline-table",
+      }}
+    >
       <h3>Your Cart</h3>
       
     
@@ -113,8 +112,4 @@ console.log('sum', sum)
     )
 }
 
-export default Cart
-
-
-
-
+export default Cart;

@@ -11,16 +11,17 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1
+      <h2
         style={{
           color: "Red",
           display: "flex",
-          alignItems: "center",
+          textAlign: "center",
           justifyContent: "center",
+          position: "",
         }}
       >
         Game Store Info
-      </h1>
+      </h2>
       <Container>
         <Row
           style={{
@@ -38,13 +39,10 @@ const Footer = () => {
             <FooterLink href="#">Testimonials</FooterLink>
           </Column>
           <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-          </Column>
-          <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="https://www.linkedin.com/in/ryan-paez/">Ryan Paez</FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/ryan-paez/">
+              Ryan Paez
+            </FooterLink>
             <FooterLink href="#">Jason Garcia</FooterLink>
             <FooterLink href="#">Abraham Gonzalez</FooterLink>
           </Column>
