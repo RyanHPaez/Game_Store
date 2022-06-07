@@ -25,14 +25,18 @@ function SignUp() {
   return (
     <form
       style={{
-        textAlign: "center",
-        width: "300px",
-        position: "relative",
-        border: "2px solid red",
-        backgroundColor: "Yellow",
-        borderRadius: "30px",
+        border: "2px solid blue",
+        position: "sticky",
+        color: "yellow",
+        backgroundColor: "black",
+        borderBottomColor: "lightblue",
+        borderTopColor: "lightblue",
         float: "right",
-        margin:"10px"
+        padding: "10px",
+        marginTop: "0px",
+        borderRadius: "20px",
+        textAlign: "center",
+        display: "inline-table",
       }}
       onSubmit={handleSubmit}
     >
