@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GameDataContext } from '../context/gameDataContext'
+import Footer from './Footer'
 
 function Cart (prop){
 
@@ -45,8 +46,17 @@ function Cart (prop){
             Checkout
           </button>
         </div> 
-      </form>
-      
+      </form>,
+      <h1
+      style={{
+        color: "Red",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row",
+      }}
+    >
+      Ready to check out?</h1>
     )
 }
 
