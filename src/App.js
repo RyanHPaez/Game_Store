@@ -6,13 +6,14 @@ import Games from "./components/Games";
 import GameReviews from "./components/GameReviews";
 import Cart from "./components/Cart";
 import { GameDataContext } from "./context/gameDataContext";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import DeleteAccount from "./components/DeleteAccount";
+
 
 
 

@@ -2,6 +2,7 @@
 import { GameDataContext } from "../context/gameDataContext";
 import {useContext, useEffect} from 'react'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 function Home(props) {
   //This needs styling 06/08
@@ -32,6 +33,8 @@ function Home(props) {
       }}
       
       >Welcome: {welcomeMessage}</h3>
+      <h4>Browse through our selection of the newest games!</h4>
+      <Link to='/games'>Games</Link>
     </div>
   );
 }
