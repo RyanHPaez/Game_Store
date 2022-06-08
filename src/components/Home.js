@@ -6,13 +6,20 @@ import {Link} from 'react-router-dom'
 
 function Home(props) {
   //This needs styling 06/08
-  const welcomeMessage = !props.user[0].username ? 'Please log-in or sign-up' : props.user[0].username
+  const welcomeMessage = !props.user[0].username
+    ? "Please log-in or sign-up"
+    : props.user[0].username;
   return (
     <div
       id="home-cart"
       style={{
+        position: "relative ",
+        height: "150vh",
+        width: "100%",
         borderBottom: "40px solid lightblue",
-        borderTop: "40px solid lightblue",
+        borderTop: "45px solid lightblue",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <h3

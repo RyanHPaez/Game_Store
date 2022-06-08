@@ -1,6 +1,9 @@
 {
-  "name": "reactspa",
+  "name": "game_store",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.14.2"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -20,7 +23,7 @@
     "react-burger-menu": "^3.0.8",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
