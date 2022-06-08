@@ -16,9 +16,8 @@ function Games(props) {
   const gameData = useContext(GameDataContext);
 
   const selectedGame = (game) => {
-    // console.log('game', game)
     setCartItems(game);
-    // console.log('cart items', cartItems)
+    window.alert(`Added ${game.title} to cart!`)
   };
 
   const handleClick = (e) => {
@@ -31,7 +30,6 @@ function Games(props) {
   const display = gameData.map((item, i) => {
     return (
       //  css this till line
-
       <div
         style={{
           background: "black",

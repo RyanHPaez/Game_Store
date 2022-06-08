@@ -1,17 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 function SignUp() {
+
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pref_system, setPref_System] = useState("");
   const [pref_genre, setPref_Genre] = useState("");
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = {
-      username: username.toLowerCase(),
+      username: username,
       email: email.toLowerCase(),
       password: password,
       pref_genre: pref_genre.toLowerCase(),
@@ -19,9 +22,10 @@ function SignUp() {
     };
     axios
       .post(`http://localhost:3005/signup/newUser`, newUser)
-      .then((res) => console.log(res.data));
-      window.location.href = "http://localhost:3001/"
+      .then((res) => console.log(res.data))
+      .then(()=> navigate("/log-in"))
   };
+  
   return (
 
     <div 

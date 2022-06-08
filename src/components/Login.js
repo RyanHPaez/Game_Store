@@ -1,14 +1,32 @@
-import {useState} from 'react'
-function Login (props) {
+import {useState, useEffect} from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
-  //Welcome the new user
+function Login ({setWelcomeUser}) {
+  
+  let navigate = useNavigate();
+  const [userData, setUserData] = useState([]);
   const [username, setUserName] = useState("");
- 
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3005/signup/users`)
+      .then((response) => setUserData(response.data));
+  }, []);
+  
+  //This function will redirect the user to the home page and post a welcome message
   const handleSubmit = (e) => {
   e.preventDefault()
-  const loggedInUser = props.users.filter(user=>{
-    return user.username == username
+  const loggedInUser = userData.filter(user=>{
+    return user.username === username
    })
+   if(loggedInUser.length > 0){
+     setWelcomeUser(loggedInUser)
+     navigate(`/`)
+   }
+   else{
+     alert('Username is invalid, please try again. *Case sensitive*')
+   }
   }
 
     return(
@@ -24,12 +42,11 @@ function Login (props) {
                   onSubmit={handleSubmit}
                   >
                     <a class="fragment" href="home">
-                  <div>
-                      <span id='close'>x</span>
+                      <div>
+                        <span id='close'>x</span>
                       </div>
-            </a>
-                    <h3>Sign In</h3>
-                    
+                    </a>
+                    <h3>Log In</h3>
                     <div className="mb-3">
                       <label>Username</label>
                       <input

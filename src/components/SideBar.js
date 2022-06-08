@@ -16,6 +16,9 @@ export default (props) => {
       <a className="menu-item" href="/cart">
         Cart
       </a>
+      <a className="menu-item" href="/deleteAccount">
+        Delete Existing Account
+      </a>
     </Menu>
   );
 };

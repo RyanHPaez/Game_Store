@@ -1,8 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 import { CartContext } from "../context/cartContext";
 
 function Cart(props) {
+
+  useEffect(()=>{},[])
   const cartItems = props;
   const gameData = useContext(GameDataContext);
   console.log(gameData);
@@ -14,11 +16,15 @@ function Cart(props) {
   console.log("checkout", checkout);
   console.log(deletedItem);
 
+  
   const removeItem = (e) => {
+    e.preventDefault()
     console.log("e");
-    let itemToRemove = checkout.findIndex((e) => {
-      return;
-    });
+    // let itemToRemove = checkout.findIndex((e) => {
+    //   return;
+    const removeGame = e.title;
+    console.log('remove game', removeGame)
+  
     // const updateCheckout = checkout.filter(item => cartItem !== item.title)
     // let checkoutItem= document.getElementById(`checkoutItem${i}`);
     // // checkoutItem.remove()
@@ -32,15 +38,12 @@ function Cart(props) {
 
   const display = checkout.map((cartItem) => {
     cart.push(cartItem.price);
-
-    i++;
-
     return (
-      <div id={`checkoutItem${i}`}>
+      <div>
         <img src={cartItem.gameImage}></img>
         <p>{cartItem.title}</p>
         <p>$ {cartItem.price}</p>
-        <button onClick={removeItem(cartItem)}>Remove From Cart</button>
+        <button onClick={()=>{setDeletedItem(cartItem)}}>Remove From Cart</button>
       </div>
     );
   });
@@ -56,6 +59,8 @@ function Cart(props) {
 
   total = sum + tax;
   console.log("sum", sum);
+
+  const emptyCart = !total ? 'Cart is empty!' : 'Thank you for shopping!' 
 
   //started a checkout function that will sum the prices from each game and display them onto the cart page
   // const checkout = gameData.map(game)
@@ -78,7 +83,7 @@ function Cart(props) {
       }}
     >
       <h3>Your Cart</h3>
-
+      <h4>{emptyCart}</h4>
       <div
       style={{
         display: "inline-table",
