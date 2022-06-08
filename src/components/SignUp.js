@@ -60,7 +60,7 @@ function SignUp() {
         </div>
       </a>
       <h3>Sign Up</h3>
-      <div className="mb-3">
+      <div className="su">
         <label>Username</label>
         <input
           type="text"
@@ -71,7 +71,7 @@ function SignUp() {
         />
       </div>
 
-      <div className="mb-3">
+      <div className="su">
         <label>Email address</label>
         <input
           type="email"
@@ -81,7 +81,7 @@ function SignUp() {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Password</label>
         <input
           type="password"
@@ -91,7 +91,7 @@ function SignUp() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Preferred Genre</label>
         <input
           type="text"
@@ -101,7 +101,7 @@ function SignUp() {
           onChange={(e) => setPref_Genre(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Preferred System</label>
         <input
           type="text"
