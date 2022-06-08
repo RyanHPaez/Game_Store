@@ -14,7 +14,24 @@ function Home(props) {
         borderTop: "40px solid lightblue",
       }}
     >
-      <h1>Welcome: {welcomeMessage}</h1>
+      <h3
+      style = {{
+        background: "black",
+      width: "50%",
+      margin: "0px",
+      textAlign: "center",
+      display: "center",
+      backgroundColor: "black",
+      borderBottomColor: "blue",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+      border: "2px solid lightblue",
+      borderTop: "2px solid lightblue",
+      left:'25%',
+      }}
+      
+      >Welcome: {welcomeMessage}</h3>
     </div>
   );
 }

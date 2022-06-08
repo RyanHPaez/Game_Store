@@ -36,27 +36,21 @@ export default function SearchBar() {
 
       <Card.Body
         style={{
-          // textAlign: "row",
-          // width: "30%",
-          // height: "auto",
-          // marginTop: "-70px",
           marginRight: "20px",
           marginBottom: "10px",
-          // display: "inline-block",
           position: "relative",
           float: "right",
-          // backgroundSize: "contain",
+          
         }}
       >
         <Card.Title
           style={{
             fontSize: "19px",
             color: "red",
-            // display: "inline-block",
             position: "relative",
             margin: "2px",
           }}
-          // className="mb-2 text-muted"
+
         >
           Find a game:
         </Card.Title>

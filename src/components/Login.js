@@ -30,15 +30,20 @@ function Login ({setWelcomeUser}) {
   }
 
     return(
-        <form style={{
-                    textAlign: "center",
-                    width: "300px",
-                    position: "absolute",
-                    border: '2px solid red',
-                    backgroundColor: "Yellow",
-                    borderRadius: '30px',
-                    
-                  }}
+        <form  style={{
+          background: "black",
+        width: "90%",
+        margin: "0px",
+        textAlign: "center",
+        display: "inline-block",
+        backgroundColor: "black",
+        borderBottomColor: "blue",
+        color: "red",
+        borderRadius: "20px",
+        position: "relative",
+        border: "2px solid lightblue",
+        borderTop: "2px solid lightblue",
+        }}
                   onSubmit={handleSubmit}
                   >
                     <a class="fragment" href="home">

@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
+// import { navigate } from "react-router-dom";
+
+
 function DeleteAccount(){
 
     const [userData, setUserData] = useState([]);
