@@ -12,6 +12,7 @@ function DeleteAccount(){
         .then((response) => setUserData(response.data));
     }, []);
 const [username, setUserName] = useState('')
+const [password, setPassword] = useState('')
 
 const handleSubmit = (e) => {
 e.preventDefault()
@@ -21,7 +22,7 @@ e.preventDefault()
   axios
     .post(`http://localhost:3005/signup/deleteUser`, deleteUser)
     .then((res) => console.log(res.data))
-    .then(()=> navigate("/"))
+    // .then(()=> navigate("/"))
 }    
 return(
     <div>
