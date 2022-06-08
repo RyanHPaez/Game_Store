@@ -16,15 +16,13 @@ function Cart(props) {
   console.log("checkout", checkout);
   console.log(deletedItem);
 
-  
+  //Working on removing item from cart
   const removeItem = (e) => {
-    e.preventDefault()
-    console.log("e");
+    // e.preventDefault()
     // let itemToRemove = checkout.findIndex((e) => {
     //   return;
-    const removeGame = e.title;
-    console.log('remove game', removeGame)
-  
+    // const removeGame = e.title;
+    // console.log('remove game', removeGame)
     // const updateCheckout = checkout.filter(item => cartItem !== item.title)
     // let checkoutItem= document.getElementById(`checkoutItem${i}`);
     // // checkoutItem.remove()
@@ -33,8 +31,6 @@ function Cart(props) {
     //   checkoutItem.remove()
     // }
   };
-
-  let i = 0;
 
   const display = checkout.map((cartItem) => {
     cart.push(cartItem.price);
@@ -60,10 +56,7 @@ function Cart(props) {
   total = sum + tax;
   console.log("sum", sum);
 
-  const emptyCart = !total ? 'Cart is empty!' : 'Thank you for shopping!' 
-
-  //started a checkout function that will sum the prices from each game and display them onto the cart page
-  // const checkout = gameData.map(game)
+  const emptyCart = !total ? 'Cart is empty!' : 'Thank you for shopping!' ;
 
   return (
     <form
@@ -103,13 +96,6 @@ function Cart(props) {
       </div>
     </form>
   );
-
-  // return (
-  //   <div id='home-cart' >
-
-  //   <h5>Games: {display} </h5>
-  // </div>
-  // )
 }
 
 export default Cart;
