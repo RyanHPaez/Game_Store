@@ -63,17 +63,19 @@ function Cart(props) {
   return (
     <form
       style={{
-        border: "2px solid blue",
-        position: "relative",
-        color: "red",
-        backgroundColor: "lightblue",
-        borderBottomColor: "lightblue",
-        borderTopColor: "lightblue",
-        padding: "10px",
-        marginTop: "0px",
-        borderRadius: "0px 0px 20px 20px",
-        textAlign: "center",
-        display: "inlineBlock",
+        background: "black",
+      width: "90%",
+      margin: "0px",
+      textAlign: "center",
+      display: "inline-block",
+      // border: "2px solid red",
+      backgroundColor: "black",
+      borderBottomColor: "blue",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+      border: "2px solid lightblue",
+        borderTop: "2px solid lightblue",
       }}
     >
       <h3>Your Cart</h3>

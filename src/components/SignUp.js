@@ -23,49 +23,34 @@ function SignUp() {
       window.location.href = "http://localhost:3001/"
   };
   return (
-    <div
+
+    <div 
     style={{
       background: "black",
-      width: "280px",
-      height: "200px",
-      margin: "20px",
+      width: "98%",
       textAlign: "center",
-      display: "inline-table",
-      border: "2px solid red",
+      display: "inline-block",
+      border: "2px solid lightblue",
       backgroundColor: "black",
-      borderBottomColor: "blue",
-      borderTopColor: "blue",
       color: "red",
       borderRadius: "20px",
       position: "relative",
     }}
     >
-    <form
-      // style={{
-      //   border: "2px solid blue",
-      //   position: "sticky",
-      //   color: "yellow",
-      //   backgroundColor: "black",
-      //   borderBottomColor: "lightblue",
-      //   borderTopColor: "lightblue",
-      //   float: "right",
-      //   padding: "10px",
-      //   marginTop: "0px",
-      //   borderRadius: "20px",
-      //   textAlign: "center",
-      //   display: "inline-table",
-      // }}
+      <form
+    
       onSubmit={handleSubmit}
     >
-      <a class="fragment" href="home">
+      <a class="fragment" href="/">
         <div>
           <span
             id="close"
-            style={{
-              width: "30px",
+            style={{     
+              // width:"100%",         
               border: "2px solid black",
               backgroundColor: "gray",
               borderRadius: "0px",
+              marginTop: '5px'
             }}
           >
             x
