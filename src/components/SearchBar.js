@@ -36,23 +36,23 @@ export default function SearchBar() {
 
       <Card.Body
         style={{
-          textAlign: "column",
-          width: "30%",
-          height: "auto",
-          marginTop: "-70px",
-          marginRight: "100px",
+          // textAlign: "row",
+          // width: "30%",
+          // height: "auto",
+          // marginTop: "-70px",
+          marginRight: "20px",
           marginBottom: "10px",
-          display: "inline-block",
+          // display: "inline-block",
           position: "relative",
           float: "right",
-          backgroundSize: "contain",
+          // backgroundSize: "contain",
         }}
       >
         <Card.Title
           style={{
             fontSize: "19px",
             color: "red",
-            display: "inline-block",
+            // display: "inline-block",
             position: "relative",
             margin: "2px",
           }}

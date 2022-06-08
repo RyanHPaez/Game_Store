@@ -64,22 +64,28 @@ function Cart(props) {
     <form
       style={{
         border: "2px solid blue",
-        position: "sticky",
-        color: "yellow",
-        backgroundColor: "black",
+        position: "relative",
+        color: "red",
+        backgroundColor: "lightblue",
         borderBottomColor: "lightblue",
         borderTopColor: "lightblue",
-        float: "right",
         padding: "10px",
         marginTop: "0px",
-        borderRadius: "20px",
+        borderRadius: "0px 0px 20px 20px",
         textAlign: "center",
-        display: "inline-table",
+        display: "inlineBlock",
       }}
     >
       <h3>Your Cart</h3>
 
-      <div>{display}</div>
+      <div
+      style={{
+        display: "inline-table",
+        position: "relative",
+      }}
+      >
+        {display}
+        
 
       <p>Tax: $ {tax.toFixed(2)} </p>
       <p>Total: $ {total.toFixed(2)}</p>
@@ -87,6 +93,7 @@ function Cart(props) {
         <button type="submit" className="btn btn-primary">
           Checkout
         </button>
+      </div>
       </div>
     </form>
   );
