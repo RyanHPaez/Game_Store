@@ -12,26 +12,22 @@ import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import DeleteAccount from "./components/DeleteAccount";
 
 
 
 function App() {
-  useEffect(() => {
+
+const [gameData, setGameData] = useState([]);
+useEffect(() => {
     axios
       .get(`http://localhost:3005/app/games`)
       .then((response) => setGameData(response.data));
-  }, []);
-  const [gameData, setGameData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3005/signup/users`)
-      .then((response) => setUserData(response.data));
-  }, []);
-  const [userData, setUserData] = useState([]);
-
-  const [username, setUsername] = useState('Please log in');
+}, []);
   
+const [welcomeUser, setWelcomeUser] = useState('Please log in');
+const logInLogOut = welcomeUser === 'Please log in' ? <a href='/log-in'>Log-in</a> : <a href='/log-in'>Log-out</a>
+ 
   return (
     <div className="App">
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
@@ -104,17 +100,18 @@ function App() {
             position: "relative",
           }}
         >
-          Log-In
+          {logInLogOut}
         </a>
         <SearchBar />
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home user={username}/>} />
+            <Route exact path="/" element={<Home user={welcomeUser}/>} />
             <Route exact path="/games" element={<Games />} />
             <Route exact path="/gameReview" element={<GameReviews />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/sign-up" element={<SignUp />} />
-            <Route exact path="/log-in" element={<Login/>} />
+            <Route exact path="/log-in" element={<Login setWelcomeUser={setWelcomeUser}/>}/>
+            <Route exact path="/deleteAccount" element={<DeleteAccount />} />
           </Routes>
         </Router>
         <Footer />
