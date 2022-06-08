@@ -11,14 +11,8 @@ body {
   
 }
 
-#home-cart{
-  height: 150vh;
-  width: 100%;
-  position:relative ;
-  background-image: url("Images/GS1.png");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  
+#home-cart{  
+  background-image: url("Images/GS1.png"); 
 
 }
 
