@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 
 
@@ -22,12 +23,19 @@ function App() {
   }, []);
   const [gameData, setGameData] = useState([]);
 
-  
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3005/signup/users`)
+      .then((response) => setUserData(response.data));
+  }, []);
+  const [userData, setUserData] = useState([]);
+
+  const [username, setUsername] = useState('Please log in');
   
   return (
     <div className="App">
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
-      <GameDataContext.Provider value={gameData}>
+      <GameDataContext.Provider value={gameData} >
         <h1
           style={{
             textAlign: "Center",
@@ -77,14 +85,36 @@ function App() {
         >
           Sign-Up
         </a>
+        <br />
+
+        <a
+          href="/log-in"
+          style={{
+            float: "right",
+            display: "flex",
+            marginTop: "-30px",
+            marginRight: "20px",
+            textAlign: "center",
+            border: "2px solid red",
+            backgroundColor: "white",
+            borderBottomColor: "blue",
+            borderTopColor: "blue",
+            borderRadius: "5px",
+            marginLeft: "10px",
+            position: "relative",
+          }}
+        >
+          Log-In
+        </a>
         <SearchBar />
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home user={username}/>} />
             <Route exact path="/games" element={<Games />} />
             <Route exact path="/gameReview" element={<GameReviews />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/sign-up" element={<SignUp />} />
+            <Route exact path="/log-in" element={<Login/>} />
           </Routes>
         </Router>
         <Footer />
