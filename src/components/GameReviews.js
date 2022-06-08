@@ -1,13 +1,8 @@
 import { useContext } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 
-function GameReview(props) {
+function GameReview() {
   const gameData = useContext(GameDataContext);
-  console.log("Game data", gameData);
-  const { cartItem } = props;
-
-  console.log(gameData);
-
   const display = gameData.map((item, i) => {
     return (
       <div

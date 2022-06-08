@@ -6,7 +6,7 @@ import Games from "./components/Games";
 import GameReviews from "./components/GameReviews";
 import Cart from "./components/Cart";
 import { GameDataContext } from "./context/gameDataContext";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
@@ -25,9 +25,11 @@ useEffect(() => {
       .get(`http://localhost:3005/app/games`)
       .then((response) => setGameData(response.data));
 }, []);
-  
+
+
 const [welcomeUser, setWelcomeUser] = useState('Please log in');
-const logInLogOut = welcomeUser === 'Please log in' ? <a href='/log-in'>Log-in</a> : <a href='/log-in'>Log-out</a>
+//This will toggle the link depending if a user is logged in
+const logInLogOut = welcomeUser === 'Please log in' ? <a href='/log-in'>Log-in</a> : <a href='#'>Log-out</a>
  
   return (
     <div className="App">

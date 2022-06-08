@@ -11,19 +11,19 @@ function DeleteAccount(){
         .get(`http://localhost:3005/signup/users`)
         .then((response) => setUserData(response.data));
     }, []);
-const [username, setUserName] = useState('')
-const [password, setPassword] = useState('')
+    const [username, setUserName] = useState('')
+    const [password, setPassword] = useState('')
 
-const handleSubmit = (e) => {
-e.preventDefault()
-   const deleteUser = {
-    username: username
-  };
-  axios
-    .post(`http://localhost:3005/signup/deleteUser`, deleteUser)
-    .then((res) => console.log(res.data))
-    // .then(()=> navigate("/"))
-}    
+    const handleSubmit = (e) => {
+    e.preventDefault()
+      const deleteUser = {
+        username: username
+      };
+      axios
+        .post(`http://localhost:3005/signup/deleteUser`, deleteUser)
+        .then((res) => console.log(res.data))
+        // .then(()=> navigate("/"))
+    }    
 return(
     <div>
     <form style={{
