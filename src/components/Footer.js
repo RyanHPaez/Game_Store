@@ -17,7 +17,6 @@ const Footer = () => {
           display: "flex",
           textAlign: "center",
           justifyContent: "center",
-          position: "",
         }}
       >
         Game Store Info
