@@ -11,33 +11,50 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = {
-      username: username,
-      email: email,
+      username: username.toLowerCase(),
+      email: email.toLowerCase(),
       password: password,
-      pref_genre: pref_genre,
-      pref_system: pref_system,
+      pref_genre: pref_genre.toLowerCase(),
+      pref_system: pref_system.toLowerCase(),
     };
     axios
       .post(`http://localhost:3005/signup/newUser`, newUser)
       .then((res) => console.log(res.data));
+      window.location.href = "http://localhost:3001/"
   };
-  //window.location to redirect to a page
   return (
+    <div
+    style={{
+      background: "black",
+      width: "280px",
+      height: "200px",
+      margin: "20px",
+      textAlign: "center",
+      display: "inline-table",
+      border: "2px solid red",
+      backgroundColor: "black",
+      borderBottomColor: "blue",
+      borderTopColor: "blue",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+    }}
+    >
     <form
-      style={{
-        border: "2px solid blue",
-        position: "sticky",
-        color: "yellow",
-        backgroundColor: "black",
-        borderBottomColor: "lightblue",
-        borderTopColor: "lightblue",
-        float: "right",
-        padding: "10px",
-        marginTop: "0px",
-        borderRadius: "20px",
-        textAlign: "center",
-        display: "inline-table",
-      }}
+      // style={{
+      //   border: "2px solid blue",
+      //   position: "sticky",
+      //   color: "yellow",
+      //   backgroundColor: "black",
+      //   borderBottomColor: "lightblue",
+      //   borderTopColor: "lightblue",
+      //   float: "right",
+      //   padding: "10px",
+      //   marginTop: "0px",
+      //   borderRadius: "20px",
+      //   textAlign: "center",
+      //   display: "inline-table",
+      // }}
       onSubmit={handleSubmit}
     >
       <a class="fragment" href="home">
@@ -116,6 +133,7 @@ function SignUp() {
         Already registered <a href="/sign-in">sign in?</a>
       </p>
     </form>
+    </div>
   );
 }
 
