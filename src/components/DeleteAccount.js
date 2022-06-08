@@ -27,14 +27,16 @@ e.preventDefault()
 return(
     <div>
     <form style={{
-        textAlign: "center",
-        width: "300px",
-        position: "absolute",
-        border: '2px solid red',
-        backgroundColor: "Yellow",
-        borderRadius: '30px',
-        
-      }}
+      background: "black",
+      width: "98%",
+      textAlign: "center",
+      display: "inline-block",
+      border: "2px solid lightblue",
+      backgroundColor: "black",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+    }}
       onSubmit={handleSubmit}
       >
         <h3>Delete Account</h3>

@@ -40,8 +40,17 @@ function Home(props) {
       }}
       
       >Welcome: {welcomeMessage}</h3>
-      <h4>Browse through our selection of the newest games!</h4>
-      <Link to='/games'>Games</Link>
+      <h2
+      style ={{
+        color:'red',
+      }
+      }
+      >Browse through our selection of the newest games!</h2>
+      <Link to='/games'
+      style ={{
+        color:"red",
+      }}
+      >Games</Link>
     </div>
   );
 }
