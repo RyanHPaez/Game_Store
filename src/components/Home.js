@@ -50,7 +50,7 @@ function Home(props) {
       style ={{
         color:"red",
       }}
-      >Games</Link>
+      >Search Games</Link>
     </div>
   );
 }
