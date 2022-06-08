@@ -68,14 +68,13 @@ function Cart(props) {
       margin: "0px",
       textAlign: "center",
       display: "inline-block",
-      // border: "2px solid red",
       backgroundColor: "black",
       borderBottomColor: "blue",
       color: "red",
       borderRadius: "20px",
       position: "relative",
       border: "2px solid lightblue",
-        borderTop: "2px solid lightblue",
+      borderTop: "2px solid lightblue",
       }}
     >
       <h3>Your Cart</h3>

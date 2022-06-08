@@ -54,14 +54,14 @@ function App() {
           style={{
             float: "right",
             display: "flex",
-            marginTop: "-50px",
-            marginBottom: "20px",
+            marginTop: "-40px",
             marginRight: "20px",
             textAlign: "center",
-            color: 'blue',
             backgroundColor: "white",
+            color: 'blue',
             borderRadius: "5px",
-            position: "static",
+            marginLeft: "10px",
+            position: "relative",
           }}
         >
           Cart
@@ -73,7 +73,7 @@ function App() {
           style={{
             float: "right",
             display: "flex",
-            marginTop: "-30px",
+            marginTop: "-40px",
             marginRight: "20px",
             textAlign: "center",
             backgroundColor: "white",
@@ -92,13 +92,11 @@ function App() {
           style={{
             float: "right",
             display: "flex",
-            marginTop: "-30px",
+            marginTop: "-40px",
             marginRight: "20px",
             textAlign: "center",
-            border: "2px solid red",
             backgroundColor: "white",
-            borderBottomColor: "blue",
-            borderTopColor: "blue",
+            color: 'blue',
             borderRadius: "5px",
             marginLeft: "10px",
             position: "relative",
