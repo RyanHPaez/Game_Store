@@ -11,31 +11,38 @@ body {
   
 }
 
-#home-cart{
-  height: 150vh;
-  width: 100%;
-  position:sticky ;
-  background-image: url("Images/GS1.png");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  
+#home-cart{  
+  background-image: url("/src/images/GS1.png"); 
 
 }
 
 h1{
   font-size:70px;
   margin-bottom: -15px;
-  /* height:50px; */
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(860deg);
-  }
-} 
+ul > li{
+  list-style: none;
+  float: "right";
+  border: "2px solid red";
+  background-color: "white";
+  border-bottom-color: "blue";
+  border-top-color: "blue";
+  border-radius: "5px",
+
+}
+
+button{
+  cursor: pointer;
+}
+
+.su{
+  margin: 50px;
+  text-align: center;
+  display: inline-block;
+}
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -104,7 +111,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
  /* Individual item */
 .bm-item {
     display: inline-block;
-
     color: #ffffff;
     margin-bottom: 10px;
     text-align: center;

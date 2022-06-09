@@ -17,7 +17,6 @@ const Footer = () => {
           display: "flex",
           textAlign: "center",
           justifyContent: "center",
-          position: "",
         }}
       >
         Game Store Info
@@ -45,6 +44,7 @@ const Footer = () => {
             </FooterLink>
             <FooterLink href="#">Jason Garcia</FooterLink>
             <FooterLink href="https://www.linkedin.com/in/abraham-gonzalez-22b161b5/">Abraham Gonzalez</FooterLink>
+            <FooterLink href="https://github.com/JasonGarcia131">Jason Garcia</FooterLink>
           </Column>
         </Row>
       </Container>

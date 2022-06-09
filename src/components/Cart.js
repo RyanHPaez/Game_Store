@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 import { CartContext } from "../context/cartContext";
 
@@ -17,6 +17,7 @@ function Cart (){
   console.log("checkout", checkout);
   console.log(deletedItem);
 
+  //Working on removing item from cart
   const removeItem = (e) => {
     console.log('e')
     // let itemToRemove = checkout.findIndex(e => {
@@ -31,19 +32,14 @@ function Cart (){
     // }
   };
 
-  let i = 0;
-
   const display = checkout.map((cartItem) => {
     cart.push(cartItem.price);
-
-    i++;
-
     return (
       <div key={i} id={`checkoutItem${i}`}>
         <img src={cartItem.gameImage}></img>
         <p>{cartItem.title}</p>
         <p>$ {cartItem.price}</p>
-        <button onClick={removeItem(cartItem)}>Remove From Cart</button>
+        <button onClick={()=>{setDeletedItem(cartItem)}}>Remove From Cart</button>
       </div>
     );
   });
@@ -60,29 +56,35 @@ function Cart (){
   total = sum + tax;
   console.log("sum", sum);
 
-  //started a checkout function that will sum the prices from each game and display them onto the cart page
-  // const checkout = gameData.map(game)
+  const emptyCart = !total ? 'Cart is empty!' : 'Thank you for shopping!' ;
 
   return (
     <form
       style={{
-        border: "2px solid blue",
-        position: "sticky",
-        color: "yellow",
-        backgroundColor: "black",
-        borderBottomColor: "lightblue",
-        borderTopColor: "lightblue",
-        float: "right",
-        padding: "10px",
-        marginTop: "0px",
-        borderRadius: "20px",
-        textAlign: "center",
-        display: "inline-table",
+        background: "black",
+      width: "90%",
+      margin: "0px",
+      textAlign: "center",
+      display: "inline-block",
+      backgroundColor: "black",
+      borderBottomColor: "blue",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+      border: "2px solid lightblue",
+      borderTop: "2px solid lightblue",
       }}
     >
       <h3>Your Cart</h3>
-
-      <div>{display}</div>
+      <h4>{emptyCart}</h4>
+      <div
+      style={{
+        display: "inline-table",
+        position: "relative",
+      }}
+      >
+        {display}
+        
 
       <p>Tax: $ {tax.toFixed(2)} </p>
       <p>Total: $ {total.toFixed(2)}</p>
@@ -91,15 +93,9 @@ function Cart (){
           Checkout
         </button>
       </div>
+      </div>
     </form>
   );
-
-  // return (
-  //   <div id='home-cart' >
-
-  //   <h5>Games: {display} </h5>
-  // </div>
-  // )
 }
 
 export default Cart;

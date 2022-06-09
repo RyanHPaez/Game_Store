@@ -19,15 +19,13 @@ function Games(props) {
   useEffect(() => {}, []);
 
   const gameData = useContext(GameDataContext);
- 
-
-
+//This sets the state variable to the game that was clicked
   const selectedGame = (game) => {
     setCartItems(game);
-    console.log('Selected game is', game)
-
+    window.alert(`Added ${game.title} to cart!`)
   };
 
+//Cart array
   const handleClick = (e) => {
     e.preventDefault();
     let newItem = {};
@@ -74,7 +72,6 @@ function Games(props) {
 
     return (
       //  css this till line
-
       <div
         style={{
           background: "black",

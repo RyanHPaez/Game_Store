@@ -1,54 +1,60 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 function SignUp() {
+
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [pref_system, setPref_System] = useState("");
   const [pref_genre, setPref_Genre] = useState("");
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = {
       username: username,
-      email: email,
+      email: email.toLowerCase(),
       password: password,
-      pref_genre: pref_genre,
-      pref_system: pref_system,
+      pref_genre: pref_genre.toLowerCase(),
+      pref_system: pref_system.toLowerCase(),
     };
     axios
       .post(`http://localhost:3005/signup/newUser`, newUser)
-      .then((res) => console.log(res.data));
+      .then((res) => console.log(res.data))
+      .then(()=> navigate("/log-in"))
   };
-  //window.location to redirect to a page
+  
   return (
-    <form
-      style={{
-        border: "2px solid blue",
-        position: "sticky",
-        color: "yellow",
-        backgroundColor: "black",
-        borderBottomColor: "lightblue",
-        borderTopColor: "lightblue",
-        float: "right",
-        padding: "10px",
-        marginTop: "0px",
-        borderRadius: "20px",
-        textAlign: "center",
-        display: "inline-table",
-      }}
+
+    <div 
+    style={{
+      background: "black",
+      width: "98%",
+      textAlign: "center",
+      display: "inline-block",
+      border: "2px solid lightblue",
+      backgroundColor: "black",
+      color: "red",
+      borderRadius: "20px",
+      position: "relative",
+    }}
+    >
+      <form
+    
       onSubmit={handleSubmit}
     >
-      <a class="fragment" href="home">
+      <a class="fragment" href="/">
         <div>
           <span
             id="close"
-            style={{
-              width: "30px",
+            style={{     
+              // width:"100%",         
               border: "2px solid black",
               backgroundColor: "gray",
               borderRadius: "0px",
+              marginTop: '5px'
             }}
           >
             x
@@ -56,7 +62,7 @@ function SignUp() {
         </div>
       </a>
       <h3>Sign Up</h3>
-      <div className="mb-3">
+      <div className="su">
         <label>Username</label>
         <input
           type="text"
@@ -67,7 +73,7 @@ function SignUp() {
         />
       </div>
 
-      <div className="mb-3">
+      <div className="su">
         <label>Email address</label>
         <input
           type="email"
@@ -77,7 +83,7 @@ function SignUp() {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Password</label>
         <input
           type="password"
@@ -87,7 +93,7 @@ function SignUp() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Preferred Genre</label>
         <input
           type="text"
@@ -97,7 +103,7 @@ function SignUp() {
           onChange={(e) => setPref_Genre(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      <div className="su">
         <label>Preferred System</label>
         <input
           type="text"
@@ -116,6 +122,7 @@ function SignUp() {
         Already registered <a href="/sign-in">sign in?</a>
       </p>
     </form>
+    </div>
   );
 }
 
