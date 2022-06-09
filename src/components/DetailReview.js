@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 import { CartContext } from "../context/cartContext";
-import '../GameDetails.css'
+import '../DetailedReview.css'
 import { isTrivialHref } from "@restart/ui/esm/Anchor";
 
 
-function GameDetails (props) {
+function DetailedReview (props) {
 
     const gameData = useContext(GameDataContext);
     
 
-    return(props.trigger) ?(
+    return(props.triggerTwo) ?(
 
-        <div className="popup">
-            <div key="" className="popup-inner">
+        <div className="popupTwo">
+            <div key="" className="popup-innerTwo">
                 <img src={props.gameImage}/>
                 {props.children}
                 
@@ -25,4 +25,4 @@ function GameDetails (props) {
 
 }
 
-export default GameDetails;
+export default DetailedReview;

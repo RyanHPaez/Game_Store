@@ -39,7 +39,7 @@ function Cart (){
     i++;
 
     return (
-      <div id={`checkoutItem${i}`}>
+      <div key={i} id={`checkoutItem${i}`}>
         <img src={cartItem.gameImage}></img>
         <p>{cartItem.title}</p>
         <p>$ {cartItem.price}</p>

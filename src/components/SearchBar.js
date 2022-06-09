@@ -1,5 +1,5 @@
 import Card from "react-bootstrap/Card";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { GameDataContext } from "../context/gameDataContext";
 import SearchResultsTest from "./Games";
 //All commented functions are only tests
