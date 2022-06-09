@@ -46,7 +46,7 @@ function Login ({setWelcomeUser}) {
         }}
                   onSubmit={handleSubmit}
                   >
-                    <a class="fragment" href="home">
+                    <a class="fragment" href="/">
                       <div>
                         <span id='close'>x</span>
                       </div>
